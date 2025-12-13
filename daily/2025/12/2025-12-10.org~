@@ -1,0 +1,170 @@
+#+title: 2025-12-10
+#+filetags: :daily:
+
+
+* LOG
+
+
+
+
+* TASK
+** INBOX LT大会パワポ
+** INBOX レポート作成→つくば
+** INBOX ポスター作成
+** INBOX レポート12月分の作成
+*** 1._結果と反省
+*** 2._今後の展望
+** DONE 津田さんに結果報告メッセージ→今書いてスケジュールで送る
+** misc
+*** DONE 定期申し込み
+*** DONE パスポート顔写真
+*** WAIT 奨学金
+→朝やる必要がある？もし明日もダメなら大学に聞きに行く
+
+
+*** WAIT amazon返品
+*** INBOX 家契約書
+*** INBOX 家の電気ガス水道などの契約を調べておくこと→わからなければメールすること
+*** INBOX kaggle
+*** DONE 楽天カードポイント
+*** WAIT 楽天カードを使用する→使ったけどよくわかんない
+*** INBOX SLT周辺[0/9]
+- [ ] [[https://arxiv.org/abs/2511.16893][[2511.16893] Predicting the Formation of Induction Heads]]
+- [ ] [[https://arxiv.org/abs/2506.11135v1][[2506.11135v1] Large Language Models and Emergence: A Complex Systems Perspective]]
+- [ ] [[https://arxiv.org/abs/2511.15419][[2511.15419] Singular Learning Theory for Factor Analysis]]
+- [ ] [[https://openai.com/index/understanding-neural-networks-through-sparse-circuits/][Understanding neural networks through sparse circuits | OpenAI]]
+- [ ] [[https://arxiv.org/abs/2307.02129][[2307.02129] How Deep Neural Networks Learn Compositional Data: The Random Hierarchy Model]]
+- [ ] [[https://arxiv.org/abs/2510.24256][[2510.24256] From Memorization to Reasoning in the Spectrum of Loss Curvature]]
+- [ ] [[https://joisino.hatenablog.com/entry/heads][LLM のアテンションと外挿 - ｼﾞｮｲｼﾞｮｲｼﾞｮｲ]]
+- [ ] https://openreview.net/pdf?id=5JcDVsV8pf
+- [ ] SGLD
+
+
+*** DONE res to 本武
+
+*** NEXT res to 広田
+
+
+*** DONE res to DOT.R
+
+*** INBOX SMS何かの登録
+https://mail.google.com/mail/u/0/?tab=rm&ogbl#search/%E3%81%A9%E3%81%A3%E3%81%A8/FMfcgzQdzcvBHrxWzFTsmSdnbhGghPTh
+
+*** INBOX 必要書類
+合格通知書写し
+住民票（発行2ヶ月以内・マイナンバー記載なし・本籍地記載なし）
+* LOG
+- 0930wp
+  1h?
+  1043出発
+  1056東福寺到着
+  1101〜1144興戸に乗る
+  1208研究室到着
+  - 電車に乗る間→ベイズ統計学読んだ
+  - 電車に乗る前→ラジオ聞いた（BBC pod cast）
+  - 電車から大学→音楽きいた
+- 大学到着後1210〜
+  - 奨学金などの申請
+    リレーロ口座おの加入手続き
+  - 新居の書類にハンコをポンポンした．
+  - 死ぬほど時間かかって，1430になった．
+- ゼミ1455
+  - メール返信ライン返信
+  - ゼミ終了，1625
+  - その後カフェに行った
+   
+- 1726 作業開始
+  - 
+  
+
+* タスク整理
+** *研究*
+とにかく何にも進捗がない．
+
+from local to global 
+https://arxiv.org/abs/2507.21449
+
+*** TODO 論文まとめの記事を公開すること
+*** TODO 研究の流れと解析について今考えていることを言語化する
+
+
+直感的な考えも大切にする→定式化ができればOK
+まず必要な予備実験を終える．その後に以下の質問に答えていく
+
+そもそもこの研究の新規性はどこにある？
+モジュールの分け方次第になってしまう
+ファインチューニングを見た場合にどう使える？
+事前学習モデル→所望タスクへのファインチューニング
+
+** *arcanain*
+今週ですべて終わる．
+
+** *volmetric*
+*** TODO windows emacs 環境構築しときたい
+*** DONE 来週以降のシフト決定すること．
+**** TODO case B implement
+**** TODO CASE c Implement
+**** TODO ここまで来たら，それぞれもう少し洗練させていく．モジュールの構成なども考え直す
+**** TODO application to loop connecter
+**** TODO そもそもシフト計算にはなんの最適化計算も入っていない
+しかしながら，小さな部分の調整などはシフト計算が行ってもよいのか？
+** *arcra*
+契約書早くしろ
+- https://qiita.com/ShotaDeguchi/items/d2e08c135f2eebaa624b
+- https://qiita.com/probabilityhill/items/9a22f395a1e93206c846
+- https://github.com/shiryu-nakano/ocr_project/blob/main/README.md
+- https://chatgpt.com/c/69314ed4-7c9c-8322-ad93-46caa44d4234
+**** 良心的な目標設定
+**** 挑戦的な目標設定
+**** 実験走行 何回目で確認走行区間を突破するのかの目標を決める
+そこから逆算する
+
+
+** *MISC*
+*** TODO 終わったプロジェクトを移動したい
+*** DONE パスポートの写真
+*** DONE arcraの金の計算
+*** TODO ARCRAの作業を可能にするための環境構築
+**** DONE pyenv install
+**** DONE python version install
+**** TODO doc2の実装→今やっても意味ないので来週からやること
+google vision ocr の使い方とかを適当に調べて実装すること
+*** DONE 全体の計算への影響を見る
+*** DONE volの12 月シフト提出．
+*** DONE １２月シフトを給与計算に反映すること
+*** TODO 加えてARCRAも計画すること．
+
+*** DONE 桂井連絡
+*** DONE 元武連絡
+*** DONE 通学証明書の連絡を送ること
+**** DONE 明日もらってから定期を作る
+*** TODO 口座
+口座の番号，つまりデビッドを登録するのか，もしくはクレジットカードを使うのかによってかなり変わってくるはず
+*** TODO 引き落としの金額とかをチェックしておくこと
+*** TODO 
+** *routine*
+** 読み物
+*** INBOX [2310.06301] Dynamical versus Bayesian Phase Transitions in a Toy Model of Superposition
+*** INBOX [2308.12108v2] The Local Learning Coefficient: A Singularity-Aware Complexity Measure
+*** INBOX Daniel Murfet氏による特異学習理論(SLT)解説を読んだ感想」Interview Daniel Murfet on Universal Phenomena in Learning Machines — LessWron」
+*** INBOX [論文レビュー] Abstract Gradient Training: A Unified Certification Framework for Data Poisoning, Unlearning, and Differential Privacy
+- https://doshisha-iml-k.slack.com/archives/D08KF5H8KGF/p1765267578753069
+- 
+Singular Learning Theory — LessWrong
+
+「Deep Learning is Singular, and That's Good」論文とpyro実装を読む
+[2502.05475] You Are What You Eat -- AI Alignment Requires Understanding How Data Shapes Structure and Generalisation
+
+
+Neural networks trained with SGD learn distributions of increasing complexity
+SGD on Neural Networks Learns Functions of Increasing Complexity
+Neural networks trained with SGD learn distributions of increasing complexity
+
+Task-Specific Skill Localization in Fine-tuned Language Models
+
+Explosive neural networks via higher-order interactions in curved statistical manifolds | Nature Communications
+
+The cost of unmodeled biological complexity in artificial neural networks: Patterns
+
+* 所感
+卒論の振り返りとして読んだ文献全てのメモを公開するか

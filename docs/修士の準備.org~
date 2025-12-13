@@ -1,0 +1,177 @@
+
+[修士前](https://www.notion.so/26d1fbe7470a8037b119ea7b5e9aff04?pvs=21) 
+
+## 事務系
+
+- 家探し
+- お金のことなどの計画
+- リスクヘッジ
+    - お金のこと↑
+    - その他技術的な部分
+    - 健康・精神
+
+## 学術系
+
+## 研究に関する日課を形成する．形成した日課によって自分を鍛える
+
+- https://joisino.hatenablog.com/entry/2023/04/10/170519#Readable-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6
+
+### 研究を進める→数を打つこと．在学中に2つのプロジェクトを完遂する
+
+- https://joisino.hatenablog.com/entry/2023/10/29/164650
+- https://speakerdeck.com/joisino/randomness?slide=19
+- https://www.cs.ucr.edu/~eamonn/Keogh_SIGKDD09_tutorial.pdf
+- https://joisino.hatenablog.com/entry/2022/09/20/172453
+
+- https://www.amazon.co.jp/dp/B08639XM13?tag=none&linkCode=ogi&th=1&psc=1
+- 
+
+### **数学の勉強**
+
+→姿勢から変えていく必要がある
+
+- https://www.youtube.com/watch?v=7xwcMPtFFGc
+    
+    > 1冊でもいいので，完璧に理解している，と自信をもって言える1冊をつくること
+    > 
+    
+    自分は久保川の統計学の本が1冊目になるのではないかと思う．
+    
+
+- https://s-shimo.hatenablog.com/entry/2022/08/08/094541
+- https://s-shimo.hatenablog.com/entry/2022/03/24/202024
+- https://www.ms.u-tokyo.ac.jp/~yasuyuki/sem.htm
+    
+    > ．「自分は本当にわかっているのか」と言うことを徹底的に自問して「絶対にこれで大丈夫だ」と思えるようになる必要があります．「だいたいこうみたいですけど，これでいいんでしょうか」などというのは(たとえ結果的に正しいことを言っていたとしても)何もわかっていないのと同じです．「完全に正しいと断言できる」ということと「自分にはわかっていない」ということの違いが自分ではっきりとつけられるようにならなくては何も始まりません．あいまいな状態のまま，セミナー本番に臨むようなことは論外です．
+    > 
+
+- https://www.ms.u-tokyo.ac.jp/~yasuyuki/grad.htm
+    - 
+
+勉強
+
+- https://joisino.hatenablog.com/entry/2024/03/27/181258#%E5%AF%BA%E7%94%B0-%E6%96%87%E8%A1%8C%E7%B7%9A%E5%BD%A2%E4%BB%A3%E6%95%B0-%E5%A2%97%E8%A8%82%E7%89%88
+- https://ytsmiling.tech/2020/02/16/memoir-img.html
+- https://www.microsoft.com/en-us/research/wp-content/uploads/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf
+- https://www.ms.u-tokyo.ac.jp/~yasuyuki/sem.htm
+    - 
+
+## そのほか
+
+筋トレと運動の習慣
+
+### ベイズ
+
+[https://drive.google.com/file/d/1Ei3knYodUVK9HSjN_U4PPI_Z0yPd8iW1/view?usp=drive_link](https://drive.google.com/file/d/1Ei3knYodUVK9HSjN_U4PPI_Z0yPd8iW1/view?usp=drive_link)
+
+https://drive.google.com/file/d/1OnPnPCVoamwDE2Fg5XRHkwGVFukY-poq/view?usp=sharing
+
+学部のシラバスを見る限り→**ベイズ深層学習ま**ではみんなやってきてるっぽい
+
+最低限として
+
+久保川，竹村→統計1級
+
+- アクチュアリー
+    - 今回は受けないことにした．
+- 統計準1級
+
+これは12月まで
+
+### 機械学習
+
+PRMLに尽きるか．
+
+自分が一番バカかもしれないのが一番の不安
+
+→実装も理論も1番
+
+# vomit
+
+資格
+
+簿記3
+
+簿記2
+
+アクチュアリー数学
+
+アクチュアリーkkt
+
+統計1-
+
+統計1
+
+Ankiを日常的につかう
+
+家にある数学系の本読破したいところ
+
+学術書10冊
+
+大まかに
+
+- 学部レベルの数学
+    - 問題演習含めて
+    - 斉藤　線形代数
+    - 統計のための行列代数
+    - 斉藤　微分積分額
+    - 解析入門？？
+    - 関数解析　とびら
+    - ルベーグ積分　とびら
+    - 
+- 機械学習
+    - qiita記事愚直にやる
+    - PRML
+    - 解釈可能なAI →原著読む
+    - 
+    - ゼロからDeep 1,2,3,4,5
+    - 深層学習
+    - 学習物理学
+    - DLと物理
+    - 物理のためのデータサイエンス
+    - 
+- ベイズ統計
+    - スクラッチ実装できるレベル→qiita 参照
+    - 久保川統計の　ベイズの部分，1，2，
+    - juria 統計
+    - ベイズ統計計算？
+    - 標準ベイズ
+- 特異学習理論
+    - 代数幾何→代数幾何学入門
+    - 特異ベイズ→ベイズ統計の理論と実装
+        - 渡辺ベイズ100本ノック
+    - 特異学習
+- 代数学
+    - ガロアのなんとかの本
+- 幾何学
+    - 位相空間
+    - 集合と位相？
+    - 微分幾何
+    - 多様体
+    - リー多様体、、？
+    - 相対性理論を
+- 情報幾何学
+- 物理学
+    - 鬼簡単なレベル
+    - ヨビノリレベルの知識
+- アルゴリズム
+- Kaggle
+- 散歩
+- 身軽にしたい
+- 服かいたい
+- 体験記書いておく？
+    - 
+
+生活
+
+早めにおきる、決めた日は必ずラボに行く
+
+論文の日課　最初に手抜きしたく無い
+
+研究室で研究やる時間を決める！
+
+定期は何回以上でオトクになる？
+
+往復490＊2 =980
+
+定期1ヶ月で、、

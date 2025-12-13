@@ -1,0 +1,324 @@
+* INBOX 一橋のブートキャンプ 
+  [2025-12-02 Tue 01:39]
+* DONE 12月の定期買う
+* INBOX init elは後で綺麗にすること 
+  [2025-12-02 Tue 01:45]
+* INBOX 学んだショートカットをまとめておくこと 
+  [2025-12-02 Tue 03:42]
+* INBOX GTD Bの続き．まだ終わってなかった 
+  [2025-12-02 Tue 04:25]
+
+  
+* INBOX GTD Cもまだやってない．プロジェクトごとの表も見れるようにしたい
+* DONE tips pageも作る
+* DONE tmp page も作る
+
+* DONE 紙ファイルの棚買うかも
+
+* DONE ボタン電池買う2032
+* INBOX close bank 京都銀行→すぐ，京都中央信用金庫→→奨学金の関係で遅くなるかも 
+  [2025-12-02 Tue 15:07]
+* CANCEL inbox 作った日付わかりずらい→CREATEDみたいな識別子欲しい 
+  [2025-12-02 Tue 15:12]
+* INBOX gtdは毎週どこかの時間で進めるようにするといいかも→zenn 
+  [2025-12-02 Tue 16:38]
+* INBOX GTD続き
+- https://chatgpt.com/c/692dc161-0788-8322-9539-d3709b757e69
+* INBOX 長沼さんの記事
+https://hiroki11x.github.io/posts/2025/09/10/todo
+* INBOX [[https://joisino.hatenablog.com/entry/theory#%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92%E3%81%AE%E7%90%86%E8%AB%96%E3%81%B8][絶対に分かる機械学習理論 - ｼﾞｮｲｼﾞｮｲｼﾞｮｲ]]
+* INBOX projectごとのノート作成なども導入する 
+  Created on [2025-12-02 Tue 18:31]
+  #+begin_src
+  ナイス確認です、そのステップまだ“理論だけ”で、設定は入れてませんでした 🙏
+ここで **「プロジェクトノート ↔ 日次ノートをちゃんとリンクさせる仕組み」** を一気に形にしましょう。
+
+やることはこの3つです：
+
+1. `~/org/roam/projects/` にプロジェクトノートを作る仕組みを用意
+2. org-roam のショートカット（find / insert）を入れる
+3. daily の LOG からプロジェクトノートにリンクを貼る運用を決める
+
+---
+
+## 1️⃣ プロジェクトノート用のディレクトリ＆テンプレを作る
+
+まずディレクトリを作ります：
+
+```bash
+mkdir -p ~/org/roam/projects
+```
+
+次に `init.el` の org-roam 設定のすぐ下あたりに **プロジェクト用 capture テンプレ**を追加します。
+
+### 追加するコード（コピペOK）
+
+```elisp
+;; org-roam 基本設定（あなたの既存設定＋少し拡張）
+(use-package org-roam
+  :ensure t
+  :custom
+  (org-roam-directory "~/org/roam")
+  :config
+  (org-roam-db-autosync-mode))
+
+;; ノード検索 / 挿入のショートカット（超重要）
+(global-set-key (kbd "C-c n f") #'org-roam-node-find)
+(global-set-key (kbd "C-c n i") #'org-roam-node-insert)
+
+;; プロジェクトノート用テンプレ
+(setq org-roam-capture-templates
+      '(("p" "Project" plain
+         "%?"
+         :target (file+head "projects/${slug}.org"
+                            "#+title: ${title}\n#+filetags: :project:\n\n* Overview\n\n* Tasks\n\n* Notes\n"))))
+```
+
+### これで何ができる？
+
+1. `M-x org-roam-node-find` か `C-c n f`
+
+2. プロンプトでプロジェクト名を入力（例：`ROS2 Planning`）
+
+3. なければ新規作成され、ファイルは：
+
+   ```text
+   ~/org/roam/projects/ros2-planning.org
+   ```
+
+4. 中身は：
+
+   ```org
+   #+title: ROS2 Planning
+   #+filetags: :project:
+
+   * Overview
+
+   * Tasks
+
+   * Notes
+   ```
+
+これが「プロジェクトノート（知識の集約場所）」になります。
+
+---
+
+## 2️⃣ 日次ノートからプロジェクトノートへリンクを貼る
+
+今の daily テンプレはこんな感じですよね（LOG 部分だけ抜粋）：
+
+```org
+*LOG
+**14:32
+   ;; ここに書き始める
+```
+
+ここから **プロジェクトノートへのリンク**を生やします。
+
+### 基本の操作パターン（いちばんシンプル）
+
+1. `C-c n i`（org-roam-node-insert）を押す
+2. プロンプトにプロジェクト名を打つ
+
+   * 例：`ROS2 Planning` / `SLT rLLC` など
+3. 候補からプロジェクトを選ぶ
+
+すると LOG の中にこういうリンクが入ります：
+
+```org
+*LOG
+**14:32
+   PurePursuit のバグ修正 [[id:abc123][ROS2 Planning]]
+```
+
+- `id:abc123` は org-roam が自動で付ける ID
+- `[ROS2 Planning]` がリンクの見た目
+
+これで：
+
+- 日次ノート → プロジェクトノート にジャンプできる
+- プロジェクトノート側からも backlinks でその日付のログが見える
+
+---
+
+## 3️⃣ プロジェクトノート側にも「日次ログへのリンク」を置きたい場合（任意）
+
+必須ではないけど、やるとかなり気持ちいい運用です。
+
+### 流れ
+
+1. 日次ノート（`daily/2025/12/2025-12-05.org`）を開く
+2. `M-x org-id-get-create` を見出しの上で実行すると、その見出しに ID がつく
+3. プロジェクトノート（例：`ros2-planning.org`）を開いて、`C-c l` → `C-c C-l` でリンクを貼る
+
+例えばプロジェクトノートに：
+
+```org
+*Notes
+**2025-12-05 PurePursuit デバッグ
+   [[id:xxxxxxx][2025-12-05 の作業ログ]]
+   - ここに軽くまとめを書く
+```
+
+こうすると：
+
+- プロジェクトノートから
+  → その日の detailed な LOG に飛べる
+- 日次ノートから
+  → プロジェクトの全体像に飛べる
+
+**行き来しやすい二重リンク構造**になります。
+
+---
+
+## 4️⃣ あなた向けの「現実的な運用パターン」
+
+あまり複雑なことを一気にやるとしんどいので、まずはこれだけでOK：
+
+### ✅ 毎朝〜作業開始
+
+- `C-c n d` で今日の daily を開く
+- `* TASK` に軽く「今日はこれやりたい」箇条書き
+
+### ✅ 作業中（LOG）
+
+- バグ調査や論文読むとき
+
+  * `* LOG` → `** HH:MM` で始める
+  * プロジェクト名を `C-c n i` で挿入 → リンク化
+- 例：
+
+  ```org
+  * LOG
+  ** 15:12
+     [[id:ros2-planning][ROS2 Planning]] PurePursuit のパラメータ調整
+     - 角速度制限を X → Y に変更
+     - 結果：カーブでオーバーシュート減少
+  ```
+
+### ✅ プロジェクトノート側
+
+- `C-c n f` → プロジェクト名選択
+- `* Notes` に「今日のまとめ」を1〜2行だけ書く
+- 詳細ログは daily 側に任せる
+
+---
+
+## 5️⃣ いまの状態に合わせた「整合性チェック」
+
+あなたの現状：
+
+- `org-roam-directory` → `~/org/roam` ✅
+- dailies → `daily/%Y/%m/%Y-%m-%d.org` ✅
+- まだ `projects/` ディレクトリと `org-roam-capture-templates`（project）は未整備 → いまやった ✅
+
+なので、このあとやるべきことはシンプルです：
+
+1. `mkdir -p ~/org/roam/projects` 済ませる
+2. `init.el` に上の **org-roam-capture-templates と C-c n f / C-c n i** を追加
+3. Emacs 再起動 or `M-x eval-buffer`
+4. `C-c n f` → `ROS2 Planning` など打ってプロジェクトノートを1つ作る
+5. `C-c n d` で daily を開き、`C-c n i` でそのプロジェクトへのリンクを LOG に挿入してみる
+
+ここまでできたら、**Step 5：プロジェクトノートとの相互リンク** は実質完成です。
+
+---
+
+もしよければ：
+
+- 一回 `C-c n f` で `ROS2` 系・`SLT` 系のプロジェクトノートを何個か作ってみて
+- そのスクショやファイル名リスト（`tree ~/org/roam`）を貼ってくれれば、
+  **それを前提に「プロジェクト別ダッシュボード（C）」の agenda ビューを一緒に組みます。**
+
+#+end_src
+* INBOX log内容を毎日discordに投げたい 
+  Created on [2025-12-02 Tue 19:52]
+* INBOX 本当はどんな感じでGTDやりたい？ 
+  Created on [2025-12-02 Tue 20:35]
+
+  LOGにざーっと書いていきたい．
+LOGにはプロジェクトごとのメモが書かれるので，後でそれを塊のまま，プロジェクトのファイルに移せればいいのかな？
+
+
+  あらかじめ1ヶ月先くらいのファイルは作っておいてもいいかも．
+
+
+  
+ →utilsでpythonで実装しておくか
+* INBOX 読みたいもの 
+  Created on [2025-12-02 Tue 20:59]
+ - [[https://mathlog.info/articles/EzVIGMfJU7M3fGHI8ajK][数学の勉強のやり方 | Mathlog]]
+ - [[https://qiita.com/Sicut_study/items/c0096caf21eefcd5c85f][【初心者完全版】0からReact開発して基礎をマスターできる最強チュートリアル 音楽生成アプリ編【図解解説】 #TypeScript - Qiita]] 
+ - [[https://studyhacker.net/unconscious-perfectionism#%E3%82%BF%E3%82%A4%E3%83%972%E6%AD%A3%E8%A7%A3%E4%B8%BB%E7%BE%A9%E5%9E%8B%E8%AA%BF%E3%81%B9%E3%82%8C%E3%81%B0%E7%AD%94%E3%81%88%E3%81%8C%E8%A6%8B%E3%81%A4%E3%81%8B%E3%82%8B%E3%81%A8%E3%81%84%E3%81%86%E5%B9%BB%E6%83%B3][あなたに "Done is better than perfect." が出来ない理由——無自覚な完璧主義、4つのタイプと処方箋 - STUDY HACKER（スタディーハッカー）｜社会人の勉強法＆英語学習]]
+ - [[https://mathlog.info/articles/tluyvuhcxujw1tbXfU5Q][可換環論の†全て†を幾何に翻訳して鑑賞しよう~前編~ | Mathlog]]
+ - https://www.youtube.com/watch?app=desktop&v=87-BNgM-KfQ
+ - 
+ - [[https://towardsdatascience.com/ai-papers-to-read-in-2025/][AI Papers to Read in 2025 | Towards Data Science]]
+* INBOX instの画像投稿 
+  Created on [2025-12-02 Tue 21:06]
+
+  - [[https://tabiato.co.jp/biz/blog/instagram-api-content-publishing/][Instagram Graph APIで自動投稿！画像もリールもストーリーも！ - 旅アトリーチ]]
+* INBOX https://arxiv.org/abs/1904.03866 
+DEADLINE: <2025-12-03 Wed>
+  Created on [2025-12-02 Tue 21:11]
+* HOLD projects.orgだと結構きつい？ 
+  Created on [2025-12-02 Tue 21:30]
+* INBOX 開発のパワポを作成すること 
+  Created on [2025-12-03 Wed 01:30]
+* INBOX 正規表現の定義がしっかりしないと話が次に進まない 
+  Created on [2025-12-03 Wed 01:46]
+* INBOX タスク表示→サブタスクが見えてしまっているので修正すること 
+  Created on [2025-12-03 Wed 12:39]
+* INBOX 
+* INBOX 
+  Created on [2025-12-04 Thu 20:21]
+* INBOX 年末年始の準備→何か一つやりたい
+→特異学習理論やる？
+  Created on [2025-12-04 Thu 20:35]
+* INBOX 本返す→情報幾何の基礎
+
+DEADLINE: <2025-12-05 Fri>
+  Created on [2025-12-04 Thu 21:15]
+* INBOX OCR参考文献群 
+  Created on [2025-12-05 Fri 11:04]
+** https://arxiv.org/pdf/2410.12628
+** https://arxiv.org/pdf/2503.17213
+** https://github.com/kotaro-kinoshita/yomitoku
+** https://arxiv.org/pdf/2510.18234
+* INBOX もろもろ 
+  Created on [2025-12-08 Mon 13:58]
+ーー
+自分のPCに環境を構築すること
+動かす
+
+
+
+ties4
+もとたけ周辺
+
+luupのログ解析したらウイルスの増殖とか模倣できる？
+- [ ] deepresearch 
+- [ ] 
+
+とにかく時間はない．こういう頑張り方をする．
+
+ズボンかなり痛んでしまった
+→毛玉取りでどこまでマシになるか
+
+そもそもパジャマ要員は早めに決めておくべきということか
+色で決める．→あまり着ない色にする
+* INBOX Downlooadsにたくさんpdf埋まってるので，google driveに挙げておくこと 
+  Created on [2025-12-08 Mon 14:03]
+* INBOX 借りてたPCのubuntu初期化 
+DEADLINE: <2025-12-28 Sun>
+  Created on [2025-12-08 Mon 20:03]
+* CANCEL 複雑系研究会について， 広田さんに連絡してみる
+  Created on [2025-12-08 Mon 22:41]
+* INBOX daiaryのテンプレと同じように，C-c n pで論文フォーマットを作成する 
+  Created on [2025-12-09 Tue 20:58]
+* INBOX 勉強として，動画を見ること→動画のリスト 
+  Created on [2025-12-10 Wed 12:29]
+* INBOX 銀行印の整理 
+  Created on [2025-12-10 Wed 13:32]
+* INBOX 機械学習発展 https://tatsy.github.io/1284-sds-advml/
+  Created on [2025-12-11 Thu 19:56]

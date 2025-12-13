@@ -1,0 +1,123 @@
+#+title: 2025-12-03
+#+filetags: :daily:
+
+* 直近の予定締め切り
+
+
+* TASK
+計画
+- 13時過ぎにvolmetric
+  - 1800退勤
+- task
+  - gxpreport submition
+  - arcra google vision ocr
+  - sgld => k 
+
+* LOG
+
+** 2025-12-02 00:04                                              :ARCRA_OCR:
+作業継続中
+tesseractの作業は終了したので，次に進む
+
+- 参考：
+  - https://www.notion.so/251011_-2893cbda9cbd804082c8e1ef68881c81?source=copy_link#28c3cbda9cbd80e2b551e7bbf92b2ad8
+- (1)の実装をベースにして，有料OCRを組み合わせたハイブリッド版を作成する
+  - Google Vision OCR ローカルから呼び出す
+** 2025-12-03 01:19                                             :ARCRA_OCR:
+*** NEXT google vision ocrについて調べる
+**** なにができる？どこまでできる？
+- [[https://zenn.dev/chot/articles/6587f0a517fb25][Google Cloud Vision API で縦書き横書き混合の日本語テキスト検出は難しい]]
+  - 縦横が混じっているとうまくいかないらしい
+- [[https://docs.cloud.google.com/vision/docs?hl=ja][Cloud Vision API ドキュメント  |  Google Cloud Documentation]]
+  - ocrチュートリアル
+  - ドキュメント
+**** ローカルで動かしてみる
+**** 実際の開発に載せるための環境構築を行う
+
+
+
+
+*** NEXT 要件まとめ
+#+ATTR_ORG: :width 600
+[[file:2025-12-03.org_image/20251203_012501.png]]
+
+**** tesseract でNGの判定を行ってからリトライしたいらしい
+
+** 2025-12-03 12:38  :MISC:
+11時起床，起き上がれなかった．やっと起き，シャワー浴びて今．
+とりあえず確認作業．
+今日はvolmetricで作業．
+後お金の計算も12月分新たに作る必要がある．
+
+
+- 口座の整理
+  - ゆうちょから引き落とされているのはほとんどLLM関連，amazon, apple -> これらを全て楽天に変更すること．
+*** NEXT open ai 
+*** NEXT claude
+*** NEXT apple
+*** NEXT amazon
+その前に月々の固定額の概算を出す必要がありそう
+
+*** NEXT 楽天の口座の暗証番号変更する
+
+#+ATTR_ORG: :width 40
+[[file:2025-12-03.org_image/20251203_124841.png]]
+** 2025-12-03 18:58  :MISC:
+volmetric: 1400-1800, 4h
+開発進めた．もう少しで追加する3モジュールのうち1つが終わりそう．プロトタイプレベルではあるが．
+
+** 2025-12-03 18:58  :Vol:
+- 1900now, @starbacks
+  開発の続きを進めること．今日は他にgxpレポート提出とarcraの開発を進めなければならない．
+- 〜1927 金の整理
+- 2040，1時間くらい経過か．1つ目のモジュールは大方片付いたと言えるだろう．
+残りやるべきこと
+*** DONE 終了条件
+targetから目標の個数を受け取る
+生産状況と見比べる→両方とも超えたら終了する．
+→もう少し高度なことが必要な場合は，
+*** DONE ループごとの生産個数を計算するためのロジックを作ること
+
+*** DONE ましなループを選んでおくこと．
+*** NEXT 事前枝刈り，選定，
+*** NEXT 結果へのカキコ
+
+ここまで終わったら次のモジュールでいいかな．
+** 2025-12-03 22:05  :MISC:
+- 作業一旦終了
+- 帰る．
+  - 2320くらいに飯作って，風呂入り，すぐにgxpのレポートを書く．
+  - 終わり次第，こんどarcanainの実装に進む．現状を確認する必要がある．
+    →docsがあったはず．notion参照する
+- 2330帰宅のちに作業開始
+  - 1:51 作業終了．提出すべき資料の作成は完了した．疲れた．
+- 
+* タスク整理
+  
+Week-agenda (W49):
+Monday      1 December 2025 W49
+Tuesday     2 December 2025
+
+ MISC
+  projects:   Deadline:   NEXT [#B] パスポートの顔写真
+  projects:   Deadline:   NEXT [#B] 各所に口座の変更を申し出る
+
+ Other items
+  inbox:      Deadline:   INBOX [#A] パワポ提出
+Wednesday   3 December 2025
+
+ MISC
+  projects:    1 d. ago:  NEXT [#B] パスポートの顔写真
+  projects:    1 d. ago:  NEXT [#B] 各所に口座の変更を申し出る
+  projects:   In   6 d.:  INBOX [#C] GTDについて調べる，あとはgptのやつ見返す
+
+ Other items
+  inbox:       1 d. ago:  INBOX [#A] パワポ提出
+  inbox:      Deadline:   INBOX https://arxiv.org/abs/1904.03866
+Thursday    4 December 2025
+Friday      5 December 2025
+Saturday    6 December 2025
+Sunday      7 December 2025
+
+* 所感
+

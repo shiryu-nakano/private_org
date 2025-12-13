@@ -1,0 +1,25 @@
+#+title: 2025-12-06
+#+filetags: :daily:
+
+* 直近の予定締め切り
+
+* TASK
+
+** arcanain開発ラスト！！
+→参考
+- [[https://github.com/shiryu-nakano/transition_recipe_test/blob/develop/cleanup/docs/memo.md][作業メモ]]
+- 何かしらモジュール，ファイルを追加する時の手順
+  - includeにhppを書く
+  - srcにcppを実装する
+  - Cmakeに追記する．この時に，dependencyに必要ライブラリをリンクすることを忘れないこと
+  - 
+- simulatorは最後でいいな
+
+
+
+* LOG
+
+* タスク整理
+
+* 所感
+

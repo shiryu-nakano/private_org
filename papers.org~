@@ -1,0 +1,662 @@
+* SGLD
+
+
+事後分布を計算して，例えばそれによって何かの平均を計算する
+→事後分布は解析的に解ける（描けない）場合が多い
+
+
+#+ATTR_ORG: :width 300
+[[file:papers.org_image/20251208_153045.png]]
+
+
+- MCMC
+  - 積分計算を近似する手法はたくさんある
+  - ここではMCMCが需要．
+- ここで以下のような理想的な状況を考える
+
+
+
+
+
+$\theta_k \sim p(\theta \mid D_n)\qquad k = 1\ldotsK$
+
+
+* [[https://www.lesswrong.com/posts/9ecpBaAiGQnkmX9Ex/learning-coefficient-estimation-the-details][Learning coefficient estimation: the details — LessWrong]]
+** 概要
+学習係数(Learning Coefficient, LC)および実対数閾値(Rael Log Canonical Threshold, RLCT)とは何か？に関する
+記事をいくつかまとめたもの．
+
+
+本文はこのLCについて，①そのモチベーションを外観し，②簡単に導出を追いながらその意味についてまとめる．
+
+
+** 特異モデル
+** Learning Coefficientとは
+LCは深層モデルなどの特異モデルを含む統計モデルに対して，その損失関数の構造を調べる道具として使える．
+もう少し具体的にいうと，LCはモデルの損失関数の谷（basin）の広がりを表すスカラー値の指標である．
+損失関数の形状を近似的に観察する手法としては他にもある，たとえば，，はあああをあああすることでっっsを見ている．
+しかしながらその手法は深層モデルなどの特異モデルには適用できない．
+*** TODO なぜ適用できない？
+
+このような特異モデルにおいても損失関数の形状を観察したい．ここでLCは，低損失領域？？？？の体積の
+スケーリング指数を谷の広さとして定義する（？？？）
+*** TODO スケーリング指数ってなに？→逐語訳しただけ？
+** モチベーション
+そもそも損失関数の形状って何？仮に損失関数があったとしてなぜその形状を知りたいのか？
+
+損失関数によって深層学習の何がわかる？→研究事例
+
+
+
+
+
+** めも
+get up to speed with 最新情報を手にいれる
+
+
+
+** LCの簡単な導出
+
+** LCの推定
+
+
+
+* https://arxiv.org/pdf/1906.01341
+
+
+* https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/q4-2.pdf
+
+
+* 代数幾何と統計理論
+渡辺澄夫，応用数理2021
+
+** 概要
+特異学習理論のイントロダクション．
+
+特異学習理論とは，特異モデルを対象に，その漸近挙動を調べ，汎化損失や自由エネルギーを求めるための道具を提供する理論．ここで代数幾何が重要になってくる．この投稿では統計的推測の問題設定から優しく解説を始めている．
+その後，正則モデルを対象にする，1970年代までに（ほぼ）気付かれた理論を概説し，その後の特異モデルの解説を行っている．
+分かること：
+統計的推測でやりたいこと
+正則理論の限界，特異理論の概要とその実応用における重要性
+
+** 統計的推測の問題設定
+
+確率変数 $x_i  \in  \mathbf{r^d}$は，独立に真の分布q(x)に従う
+q(x)に関して，我々は何も知らない．これを未知の分布という．
+ここからn個のデータを集めて，サンプルと呼ぶ．
+「サンプルから未知であるq(x)を推測したい」という問題を考える．
+これを行う人を著者は「データ分析者（分析者）」と呼んでいる．
+
+分析者は，何らかの方法で$$p^*(x)$$を構成して，q(x)の近似を得るよう努力する．
+分析者はq(x)について何も知らないので，
+$$(x_1,...,x_n)$$のみから$$p^*(x)$$を構成する．この手法については統計的推測の研究によって多数の方法が提案されてきた．つまり写像，$$x^n \to p^*(x)$$の作りかたがたくさんある．
+
+例えば，最尤法，事後確率最大化法，スパース推定法，ノンパラメトリック法など．
+
+** ベイズ法
+ここでは上記問題設定において$$p^*(x)$$を構成する方法の一つとしてベイズ法を取り上げている．
+
+
+
+
+
+
+** 正則理論
+
+** 特異理論
+
+** 特異理論の数学的背景
+難しいことがたくさん書かれているが，統計モデルが正則でない場合に，自由エネルギーの漸近挙動がなぜ本稿で示されたようなものになるのか，数学的基礎がまとめられている．
+
+** 応用
+正則でないモデルは例えば，階層型神経回路網，混合正規分布，行列分解，隠れマルコフモデル，潜在ディリクレ分布モデルなどがある．
+それぞれモデルごとに実対数閾値が厳密な形で解明されているらしい．
+
+これまでは独立なサンプルを仮定していたが，サンプルが独立でない場合もある．例えば時系列予測の場合や空間統計などの問題設定では，サンプルは独立ではない．それでも事前分布と何らかの統計モデルを用意することで事後分布を計算す流ことが手続き上可能だしそうされている．
+
+** なぜこんなことを考える必要があるのか？
+汎化損失もしくは自由エネルギーの「推測」を行う，ということを考えている．正則モデルに関しては70年代までにほぼ整備された，特異モデルにかんしてもそれから50年以上経って理論が整備されてきている．
+
+*** 汎化損失や自由エネルギーについて知る（を推測する）ことで何が分かるのか？
+
+*** 
+
+
+** 雑感
+dnnと何の関係があるか
+例えばnnを使って解いている問題も，上記のような問題設定として綺麗に書けばなんか計算できるかもしれない．
+transferに興味あるのでその辺を探ってみたいと思う．
+
+
+
+
+
+
+
+
+
+
+adaf$\sigma$
+
+$$\sigma $$aa
+
+
+確率変数 $x_i  \in  \mathbf{r^d}$　は，独立に真の分布q(x)に従う
+q(x)に関して，我々は何も知らない．これを未知の分布という．
+ここからn個のデータを集めて，サンプルと呼ぶ．
+「サンプルから未知であるq(x)を推測したい」と言う問題を考える．
+これを行う人を「データ分析者（分析者）」と呼ぶ．
+
+分析者は，何らかの方法で$$p^*(x)$$を構成して，q(x)の近似を得るよう努力する．
+分析者はq(x)について何も知らないので，
+$$(x_1,...,x_n)$$のみから$$p^*(x)$$を構成する．この手法については統計的推測の研究によって多数の方法が提案されてきた．つまり写像，$$x^n \to p^*(x)$$の作りかたがたくさんある．
+
+例えば，最尤法，事後確率最大化法，スパース推定法，ノンパラメトリック法など．
+
+
+
+
+
+
+* TODO You’re Measuring Model Complexity Wrong
+by Jesse Hoogland, Stan van Wingerden
+On:11th Oct 2023
+@AI Alignment Forum
+[[https://www.lesswrong.com/posts/6g8cAftfQufLmFDYT/you-re-measuring-model-complexity-wrong][You’re Measuring Model Complexity Wrong — LessWrong]]
+
+** 概要というか外観
+[[https://arxiv.org/abs/2308.12108][[2308.12108] The Local Learning Coefficient: A Singularity-Aware Complexity Measure]]
+を引用しながらこの手法についてまとめているようだ．
+Depelomental Interpretability research agendaにとってこのLLCを基礎としたモデルの複雑性の推定手法は重要らしい
+[[https://www.lesswrong.com/posts/TjaeCWvLZtEDAS5Ex/towards-developmental-interpretability][Towards Developmental Interpretability — LessWrong]]
+
+> These techniques are foundational to the Developmental Interpretability research agenda and constitute the first generation of methods for detecting and understanding phase transitions, with potential applications for both interpretability and mechanistic anomaly detection. We expect this set of techniques to become a fixture in the alignment toolkit, and we've published a library and examples to help you get started.
+
+-> library https://github.com/timaeus-research/devinterp/
+-> examples https://github.com/timaeus-research/devinterp/tree/main/examples
+これらは絶対動かす必要あり
+
+
+構成
+①モデルの複雑さをなぜはかはなくてはならないのか
+②LLCとは何か
+③LLCの推定法
+④展望
+
+
+** モデルの複雑さを調べるモチベーション
+モデル比較→古典的な統計でもモデル比較は研究されていて，それと同じ様なモチベーションだと思っていい．
+
+評価セットで同じ様にフ
+
+
+** モデル比較
+
+
+
+学習過程には相転移現象というのがあるらしい．読む限りだと
+突然の損失の急激な低下や挙動・内部挙動の変化
+
+#+ATTR_ORG: :width 40
+[[file:log_2025_Sep.org_image/20251017_135755.png]]
+
+線形ネットワークなどの単純なモデルでは簡単にみられるが，複雑なモデルでは隠れて見えないらしい．
+彼らはこれを検知・予測できるようにしたい
+
+** 感想
+この世界で本気で生き残るためにすべきことを考えて実行しなくては
+危機感が今まで足りなかった
+
+
+
+* TODO https://arxiv.org/pdf/2402.05162
+* TODO What should be learned first
+* TODO UNVEILING THE BASIN-LIKE LOSS LANDSCAPE IN LARGE LANGUAGE MODELS
+** TODO この論文わかるために，visualising loss land scapeから読んでいかないといけないかも
+** 概要
+この論文は，
+
+LLMの損失関数のbasinsの出現を発見した　？？
+LLMのモデルを大きくするにつれてパラメータの「安定領域」が観察された．
+安定領域とは，パラメータ空間において，ランダムな摂動に対して性能がほとんど変化しない領域のことらしい．領域外に出る方向の摂動に対しては性能が崩壊する．
+おそらくここで用いているbasinも同じ意味で使われている．
+
+事前トレーニングが基本的な能力を基礎づけるbasinを作成し、その後のアライメントの微調整が特定の能力の盆地（安全、数学、コーディングなど）を形成することを観察した．
+
+ここから筆者たちは以下の主張をしてる
+- 良性のfine tuningは事前学習前の能力を維持するべき
+
+  さらに
+ jjp敵対的な微調整は、ほぼ最悪の方向に沿って移動し、モデルの能力を急速に低下させます。最後に、盆地のサイズが、敵対的なものを含む微調整のパフォーマンスの低下を制限すると同時に、入力摂動によるモデルの堅牢性を保証し、盆地を拡大することの利点を示唆する理論的分析を提供します
+。
+*** つまりpretrainからfinetuning
+
+
+
+
+
+** 背景
+
+
+
+** 新規性
+この研究
+****
+
+** めも
+
+alignment brittleness phenomenon
+
+知見；
+
+** LLMのloss landscapeはbasinに似ている．
+basin: その内部において性能が安定していて，外に出ると性能が崩壊する領域のこと．
+
+**  
+細かい質問
+ここでのタスク？でのsaftyって何を指している？
+most-caseとは？
+
+smooth modelとは何？これはLLMにおいてこの論文の主張を得るために使った解析手法としてのモデルなのか，
+本当にそういうLLMモデルがあるのかどっち？
+
+* todo [[https://papers.nips.cc/paper_files/paper/2019/hash/87784eca6b0dea1dff92478fb786b401-abstract.html][time matters in regularizing deep networks: weight decay and data augmentation affect early learning dynamics, matter little near convergence]]
+* todo [[https://www.cell.com/patterns/fulltext/s2666-3899(23)00297-0][a critical period for developing face recognition: patterns]] 
+* todo time matters in regularizing deep networks: weight decay and data augmentation affect early learning dynamics, matter little near convergence
+* TODO LLC 論文: the local learning coefficient: a singularity-aware complexity measure
+https://arxiv.org/pdf/2308.12108
+
+nnの複雑さを図る道具
+→dnnは特異点を持つ（どこに？？？）ので，
+** 概要
+この論文の構成，LLCを理論的に導入すること，LLCの推定量を開発したこととその実験検証．
+セクションごとに
+1
+2
+3
+4
+5
+** この論文ではLLCの有効性を検証するために複数の実験を行っている（以下）
+DLN,
+ResNet,
+Transformer,
+ReluNet
+など
+
+
+
+SLTはモデルの複雑さを図るための出発点として自由エネルギーを使用する．
+
+LLCは局所的な自由エネルギーを考えることで導出している模様．
+** LLC 局所学習係数
+LLCは渡辺2009で導入されたLearning Coefficient(LC)の拡張版で，損失関数の局所最小を達成するパラメータ ${w^{*}}$に対して，その
+
+モデルのグローバルな性質を表すもので，
+*** 直感的
+*** 定義
+*** 補足
+
+** 感想
+数学もっとやりたい
+
+SLTに準拠した研究や実験を行うことは何を意味するのか
+→従来のloss landscape研究に対して，モデルの特異的な構造を無視しないことでより正しい結果を得ようとしていることになる．
+
+臨界期研究に繋げて考えると，
+今までの解析と，SLTに基づくLLCを使った解析の差分が明確に見られた場合，それはモデルの特異構造による何らかの現象を浮き彫りにできたことになる．
+これが見れたらかなり考察のしがいがある．
+
+
+
+#+ATTR_ORG: :width 40
+[[file:log_2025_Sep.org_image/20251027_020609.png]]
+やっぱりそうだよねとしか言いようがないが，やはりここら辺の手法はPAC-Bayesと繋がってくる
+
+
+
+
+
+* todo differentiation
+この論文でやったことは何か
+
+何が開発された
+
+何ができるようになった
+
+ここでは何をして確かめた？
+
+自分の研究との関連は何？
+
+* todo what shoul be learned first?
+l
+* done schema formation in a naural population subspace underlies learning-to-learn in flexibel sensorimoter problem-solving
+a
+ :properties:
+   :author: david mayo, mengye ren,gamaledin elsyaed...
+   :year: 2023
+   :journal: 
+   :doi: 
+   :keywords: 
+ :end:
+
+このl2lの論文(schema formation)では、このような特別なメタラーニング手法を適用せずとも、単一タスク複数刺激の設定ではl2lが起きるということを主張している。その論文では単一のタスク構造に対して対応するスキーマを獲得することで刺激の多様性に対して素早く対応できるようになることをl2lとよんでいる。
+
+我々の課題設定では、上記のものとは少し違い、4刺激を2つに分けた２タスクを、交互、もしくはブロックで行ったときの学習効率の違いとその神経科学的な機構について探求する。
+
+- 類似点
+  タスク構造は1つ。つまり刺激に対してgo,nogoを選択するタスクである。
+-相違点
+ タスクはインクリメンタルには増えない、あくまで2つ。これを繰り返すか、もしくはブロックでやるかの違いを見る。
+ *l2lではテストの性能は見ておらず、基準に到達するまでの時間（トライアル数）によってl2lを確認している。補足すると、我々の結果でも、l2lのような減少は起きている。タスクスイッチ後の成績低下は、インターリーブではスイッチを繰り返すと小さくなる。最終的には発生しなくなる。*
+ →これは一概に言えない。インプット側が完全に刺激をgo，nogoにマッピングし終わっていれば似たようなことが起きる。
+ ただ,l2l論文では既出タスクの正答率は注目されていない。l2lでは学習効率の向上（知識の再利用）
+- 知識の再利用と、知識の保存は共存しない部分がある。ということかもしれない。
+  一方、
+
+- あり得る着眼点
+  学習カリキュラムによってモジュラリティが大きく変化する。（modular 論文、l2l）
+  再利用、つまり転移のときにtransfer 論文に近いような機構で行われている可能性がある。
+  ブロックではそこまで壊される可能性がある？
+  →むしろl2lによればブロック学習によって1つの刺激の組み合わせでタスク構造がロバストに得られると、次の学習だと
+  知識の再利用と、知識の保存の関係性、、
+
+- 他に足りなそうな部分
+  タスク構造は単一なので、l2l論文と同じような効率向上の傾向は見られるはず（見られている）、しかし、l2l論文では刺激の表現には注目していない。
+  ○ただ刺激を完全に覚えてしまっているだけの可能性もある
+
+
+- モジュラリティとサブスペースをうまくつなげるような解析手法があればいいはず。
+ 
+* done multitask learning via interleaving: a neural network investigation 
+ :properties:
+  :author: david mayo, mengye ren,gamaledin elsyaed...
+  :year: 2023
+  :journal: 
+  :doi: 
+  :keywords: multitask learning,forgetting,relearning savings,task switching, interleaving training, weight consolidation
+  
+  :end:
+
+** memo
+https://docs.google.com/presentation/d/1p4qpgiy3vh5qwpk0eivkqlshdaxpoygx_qsndm9rjta/edit#slide=id.g2f9ac13af48_0_147
+to slide
+
+イントロでは、従来の研究特に破滅的忘却の研究を手法と目的に応じて分類しながら批判した。
+批判の論点→
+破滅的忘却に対する認識のちがい＝① 動物では存在せず、mlにのみ存在する問題点としてそれをアドホック的に解決する手段を開発している。② 両者において発生する現象である
+とすることで、機械学習と神経科学の対応関係を探り、その上で複数のタスクを学習し、
+忘却を妨げるメカニズムに注目する。
+
+著者は基本的に② を推す立場。
+
+ 
+rapid drop in accuracy is really the result of cf? or task switching cost?
+
+
+自分たちの研究室では動物のモデルと、機械学習モデルのデータを比較できる可能性があるので、そこは非常に重要。
+その際神経活動データの解析手法や、そこからどんな情報が抜き出せるのかについては予め調べておく必要がある→すごくいい手法が見つかれば理論＋実験データを合わせた論文にできるかもしれない
+
+
+
+** 概要
+
+機械学習モデルと、動物の学習環境を自然なもの（インターリーブ）に揃えることで、２つのネットワークモデルのマルチタスク学習における性質の類似点と相違点を探求した論文。
+従来の機械学習ではマルチタスク学習の環境として自然でないものが設定されていた（ブロック学習）動物の環境ではあるタスクが完璧になってから次のタスクに移行することは考えずらく、複数のタスクを交互にときながら学習する。このような環境設定において機械学習モデルがどのように学習するかを調べ、動物との比較を行うことによって上記の目標を達成しようとしている。
+
+
+本質的には生物学的な機構から深層学習モデルを発展させていこうとする考え方のように見える。
+
+
+** 批判されている理論は何？: 現在の理論に対する批判点や問題点。
+in machine learning, standard ssettings to learn multitask is blocked curriculim, which the model learns one task completely and then switch to the next task to learn. in this setting, catastrophic forgetting (catastrophic interferance) is exhibted. many works focused to overcome or mitigate this phenomenon by add-hoc mechanism. however, cf can be seen in human or other animals, in othe words, biological neural networks also exibit this property.if this phenomenon is the common thing across artificial and biological nets, further reserch pathway still remains: 1）although both nneural nets suffer from cf, animal brain can learn multiple tasks    2） 
+
+
+** どういう文脈・理路をたどっている？: 論理展開や理論の進化。
+
+1. by contloring the environment structure through run-length p,
+   they explored the effect of it on the efficiancy or the performance of the modelb
+    
+   result:
+   long run length == task switch is not frequent
+     
+
+   short run length
+2.  
+
+
+** method
+
+supervised learning
+2 tasks -> image classification
+
+model : resnet-50
+[[https://openaccess.thecvf.com/content_cvpr_2016/html/he_deep_residual_learning_cvpr_2016_paper.html][cvpr 2016 open access repository]]
+
+task, dataset:
+cifar10 into 5 and 5
+cifar5 + svhn
+
+
+
+training environment : characterized by **run length** p
+
+
+
+
+
+** 議論
+
+- 
+
+- 提案された手法や結果に基づく議論。
+    議論はある？: 理論に対する反論や議論。
+   - 他の研究との関連性や、どのような応用可能性があるかについての考察。
+     
+
+
+
+  
+
+** 次に読むべき論文と次にやること
+
+first thing to do is serching other work related to block/interleave comparing.
+ 1. result behaviour
+ 2. model analysis (shcema?)
+ 3. mechanism of the above results
+    
+
+*** synapticメカニズムの話
+
+fnnとrnn
+
+
+** 論文の論理展開
+human learning with multiple tasks
+ forgetting with relearning savings
+ task switching cost
+ blocked versus interleaved training
+
+
+
+
+* hold context-dependent conputation by recurrent dynamiocs in prenfrontal cortex
+ :properties:
+  :author: david mayo, mengye ren,gamaledin elsyaed...
+  :year: 2023
+  :journal: 
+  :doi: 
+  :keywords: multitask learning,forgetting,relearning savings,task switching, interleaving training, weight consolidation
+  
+  :end:
+
+ todo modular representation emaerge in neural networks trained to perform context-dependent tasks
+ :properties:
+  :author: 
+  :year: 
+  :journal: 
+  :doi: 
+  :keywords: https://www.biorxiv.org/content/10.1101/2024.09.30.615925v2.full.pdf
+  :end:
+** motivation
+まずrnnモデル内部で、functional modularityがどのように構成されるのか？
+→shcema論文で言うところの、
+
+** concludion
+
+* todo flexible multitask conputation in recurrent network shared dynamical motifs 
+* done transfer learning in deep leinforcement learning: a survey
+https://arxiv.org/abs/2009.07888
+
+- 理由
+  20241021
+カリキュラム学習や、ブロック、インターリーブ学習で学習の進み方や、学習後のモデル内部の性能が違うのであれば、それは他方で学んだタスクの知識の転移が起きている可能性がある。その部分を探るために少しだけ読んだ。読んだ部分は以下
+
+- representation transfer
+  	 示されていた手法はかなり明示的だったが、これらに類似するような転移が暗に行われている可能性がある
+	→一つのタスクで学習した表現を未来の学習で再利用する。
+	本論文では転移学習がテーマなので、表現を転移させるための（神経基盤とは関係のない）メタラーニングの手法
+  	 一方、l2lの論文(schema formation)では、このような特別なメタラーニング手法を適用せずとも、単一タスク複数刺激の設定ではl2lが起きるということを主張している。その論文では単一のタスク構造に対して対応するスキーマを獲得することで刺激の多様性に対して素早く対応できるようになることをl2lとよんでいる。
+
+- 結論
+  本論文で行われているようなrepresentation transferを直接やることはないにしても、似たような機構を脳が持っていて、タスクや刺激に関する知識を転移させている可能性はある。
+     
+* TODO inferring neural activity beforie plasticity as a foundation for learning beyond backpropagation
+ :properties:
+  :author: john doe, jane smith
+  :year: 2024
+  :journal: nature
+  :doi: 10.1000/xyz123
+  :keywords: neural networks, learning, plasticity
+  :end:
+
+** 概要and memo
+
+   - credit assignment problemという学習における重要な概念が出てくる。
+   - 脳が誤差逆伝播法に近い形で学習していることを理解しようとする最近の潮流。
+   - 誤差逆伝播法を用いる場合、catastrophic interference of newly and previously stored information が発生する可能性がある。
+   - 誤差逆伝播法が脳の学習を説明するのに適していないとの見方がある。
+   - 提案された新しいフレームワーク‘prospective configuration’について:
+     > シナプスの重みが変更される前に、ネットワーク全体の神経活動が変化し、出力ニューロンがターゲット出力をより正確に予測するようになる。その後にシナプスの重みが変更され、この神経活動の変化を統合する。これとは対照的に、誤差逆伝播法では重みの変更が先行し、神経活動の変化がその結果として生じる。
+
+*** prospective configuration
+
+*** memo
+what is the goal of block and interleave project? what does this work state?
+
+ブロックによるマルチスキーマ獲得と、インターリーブによるマルチタスク学習の２つの主張をうまく昇華できる枠組み
+
+mayo et al 2023のfig６ではブロック学習では片方のタスクに対する性能が著しく低下してしまっていた
+→インターリーブのあとに、ブロックを挟むとどうなる？？これも同じように下がるのか
+下がるなら...
+　学習によってえられてい
+
+下がらないなら、、
+　インターリーブ学習とブロック学習によってモデルが獲得する性能がおおきく変わる
+→スキーマ学習？
+
+なぜなら、そこまでの過程が異なったことによって、そのモデルが環境の変化（タスク入れ替え頻度）に対して
+ロバストな、「タスク間に共通する表現と出力層」を獲得しているから
+→ろすを見ればある程度わかるかもしれない。どんな実験がいいか
+
+インターリーブでは後半にかけてタスク切り替え時のlossは大きくない
+→互いの処理が鑑賞しない？
+
+やはり、神経活動から何らかの表現の持つ情報量を定量化して比較する手法が必要か
+物理学、統計学、確率論
+
+
+
+*** この論文の引用が、mayo et al 2023とかなりかぶっているので要チェック
+
+
+
+** 先行研究との相違点
+   - 提案されたフレームワークが従来の誤差逆伝播法とどのように異なるかを比較。
+   - 特に「prospective configuration」と従来の「backpropagation」の違いについて詳細に説明。
+
+** 技術や手法のポイント，アーキテクチャの新規性など
+   - 新しいフレームワークの技術的な革新点や、使用されたアーキテクチャの特徴。
+   - 提案された方法が他の手法と比較してどのように優れているか。
+prospectie configuration が従来の（特にrnn）モデルとどのように異なるのか
+観点１
+
+観点２
+
+   
+** どうやって有効だと検証したか
+   - 実験手法やシミュレーションの結果、またはデータの分析方法。
+   - 提案されたフレームワークが従来の手法に対して有効であることをどのように確認したか。
+
+
+   他にできそうなことはある？
+   このモデルを使うと、どんな新しいことが言える（かもしれない）？
+   
+   
+** 議論
+   - 提案された手法や結果に基づく議論。
+   - 他の研究との関連性や、どのような応用可能性があるかについての考察。
+
+** 次に読むべき論文
+   - hpofieldや寺前さんの関連論文など、参考になる次のステップとなる文献のリスト。
+
+** 理論系 (適用可能な場合)
+   - どんなもの？: 理論的な背景やコンセプト。
+   - 批判されている理論は何？: 現在の理論に対する批判点や問題点。
+   - どういう文脈・理路をたどっている？: 論理展開や理論の進化。
+   - 対象となるスコープにおいて網羅性と整合性はある？: 理論の適用範囲やその妥当性。
+   - 議論はある？: 理論に対する反論や議論。
+   - 次に読むべき論文は？: 理論に関連する文献。
+
+* TODO flow-field inference from neural data using deep recurrent networks 
+** 要約
+
+
+** 先行研究との相違点 
+
+ポイント
+path1
+ スパイク列とtask relevant input, letent valueの３つからlatent valueの dzを出すネットワーク
+ 
+ 
+path2
+ 潜在変数の値と、タスク関係入力から、その時刻の潜在変数の時間微分
+
+
+学習
+ loss
+ reconstruction loss, d_kl [path 1|path 2]
+
+
+ パス２つのnnを両方学習することで、片方のパスのみを推論に使えるようにする
+っ
+
+ 
+** 技術や手法のポイント，アーキテクチャの新規性など
+
+** どうやって有効だと検証したか
+
+** 議論
+
+** 次に読むべき論文
+
+** 論文の研究と肩を並べる
+
+→試しに実装してみる
+
+→わからない場所はほかの論文を見ながら調べる
+
+→その分野のどこが一番面白いとこだと思ったか？
+
+→今の社会と合わせるとどこに問題があると思う？
+
+
+
+
+
+
+
+* -------- まとめ -------
+- you are measureing model complexity wrong
+  - これがLLC論文の前段に対応する
+- LLC＋diff
+  

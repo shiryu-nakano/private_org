@@ -1,0 +1,62 @@
+#+title: 2025-12-08
+#+filetags: :daily:
+
+* 直近の予定締め切り
+
+* TASK
+** INBOX LT大会パワポ
+** INBOX レポート作成→つくば
+** INBOX ポスター作成
+** INBOX レポート12月分の作成
+*** 1._結果と反省
+*** 2._今後の展望
+** DONE 津田さんに結果報告メッセージ→今書いてスケジュールで送る
+
+
+* LOG
+
+** 2025-12-08 17:56  :MISC:
+*** DONE 定期申しd込み
+*** INBOX パスポート顔写真
+*** INBOX 奨学金
+*** WAIT 返品
+*** INBOX 家契約書
+*** INBOX 家の電気ガス水道などの契約を調べておくこと→わからなければメールすること
+*** INBOX kaggle
+*** DONE 楽天カードポイント
+*** INBOX 楽天カードを使用する
+
+* タスク整理
+今週（月曜から）の予定
+- 研究 <70%
+  - ゼミ発表あり
+- Arcanain <5%
+  - 反省，今後の展望
+- Vol 10%
+- ARCRA 0%>
+  - とりあえず毎日OCRの記事読んでおくこと．
+  - 最後パワポまとめさせられるのでこれも蓄積しておくこと
+- B4
+  中西先生に連絡するための原稿を書く．
+  
+*** INBOX SLT周辺[0/9]
+- [ ] [[https://arxiv.org/abs/2511.16893][[2511.16893] Predicting the Formation of Induction Heads]]
+- [ ] [[https://arxiv.org/abs/2506.11135v1][[2506.11135v1] Large Language Models and Emergence: A Complex Systems Perspective]]
+- [ ] [[https://arxiv.org/abs/2511.15419][[2511.15419] Singular Learning Theory for Factor Analysis]]
+- [ ] [[https://openai.com/index/understanding-neural-networks-through-sparse-circuits/][Understanding neural networks through sparse circuits | OpenAI]]
+- [ ] [[https://arxiv.org/abs/2307.02129][[2307.02129] How Deep Neural Networks Learn Compositional Data: The Random Hierarchy Model]]
+- [ ] [[https://arxiv.org/abs/2510.24256][[2510.24256] From Memorization to Reasoning in the Spectrum of Loss Curvature]]
+- [ ] https://openreview.net/pdf?id=5JcDVsV8pf
+- [ ] [[https://joisino.hatenablog.com/entry/heads][LLM のアテンションと外挿 - ｼﾞｮｲｼﾞｮｲｼﾞｮｲ]]
+- [ ] SGLD
+
+
+- 明日の空間精度どうする？→明日にするか明後日にずらすか．
+  - ずらしたとしても明日でかなり話を進めないといけない．研究の方でチェックリスト作って話を進めること
+*** まとめ
+Atcoder, 論文まとめ，実装の詳細もまとめる．
+
+
+
+* 所感
+

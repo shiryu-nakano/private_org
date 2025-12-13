@@ -1,0 +1,70 @@
+#+title: 2025-12-04
+#+filetags: :daily:
+
+* 直近の予定締め切り
+
+* TASK
+
+* LOG
+** 2025-12-04 16:36  :VOLMETRIC:
+16時から作業開始
+19時まで働いた→3h
+
+** NEXT メール
+本武先生
+
+お久しぶりです．以前ご連絡してから私が勘違いしていたようで，ずっと連絡をしていなくて申し訳ありません．（安齋さんに教えていただきました．ありがとうございます．）
+以前のメール見返したら私がリマインドする側でした，勘違いしてました．．
+
+予定よりも時期がずれてしまって，年末でお忙しいと思いますので，まずは一度本武先生とお話しする時間をいただければと思います．
+どこかでお時間をいただければありがたいです．
+修士に入ってからのことなど少しずつ計画できればと考えています．
+
+どうぞよろしくお願いいたします．
+
+中野
+
+** NEXT 桂井先生
+帰ったらすぐ書く→ドキュメントもか九
+進捗ですが，．．です．
+
+中西先生にお時間を作っていただければと思います．
+
+
+https://sites.google.com/view/complex-system/#h.9dzfjdf92ol5
+
+これに参加したいと言ってみる→すぐにでも連絡すべきやな
+
+
+
+* タスク整理
+Week-agenda (W49):
+Monday      1 December 2025 W49
+Tuesday     2 December 2025
+
+ MISC
+  projects:   Deadline:   NEXT [#B] パスポートの顔写真
+  projects:   Deadline:   NEXT [#B] 各所に口座の変更を申し出る
+
+ Other items
+  inbox:      Deadline:   INBOX [#A] パワポ提出
+Wednesday   3 December 2025
+
+ Other items
+  inbox:      Deadline:   INBOX https://arxiv.org/abs/1904.03866
+Thursday    4 December 2025
+
+ MISC
+  projects:    2 d. ago:  NEXT [#B] パスポートの顔写真
+  projects:    2 d. ago:  NEXT [#B] 各所に口座の変更を申し出る
+  projects:   In   5 d.:  INBOX [#C] GTDについて調べる，あとはgptのやつ見返す
+
+ Other items
+  inbox:       2 d. ago:  INBOX [#A] パワポ提出
+  inbox:       1 d. ago:  INBOX https://arxiv.org/abs/1904.03866
+Friday      5 December 2025
+Saturday    6 December 2025
+Sunday      7 December 2025
+
+* 所感
+

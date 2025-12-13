@@ -1,0 +1,993 @@
+
+* MISC
+** DONE ユニクロ→ウルトラヒートテック上2，下2
+→12000
+++＋ゼビオ？→下のフリース1万とかする？++流石に高杉
+** NEXT [#B] パスポートの顔写真 
+DEADLINE: <2025-12-02 Tue>
+** INBOX [#C] GTDについて調べる，あとはgptのやつ見返す
+DEADLINE: <2025-12-25 Thu>
+*** DONE agendaまだ使えてないのでここは注意すること
+*** DONE agendaで重くなった？？？
+https://chatgpt.com/c/692dc161-0788-8322-9539-d3709b757e69
+** DONE [#B] 各所に口座の変更を申し出る
+DEADLINE: <2025-12-02 Tue>
+*** DONE バイト先
+*** DONE ゆうちょの明細を見て全て楽天に変更すること，ただしgxpはそのままでおk
+*** NEXT 楽天口座にすべきか，もしくは楽天カードを登録すべきか？gptに聞いてみる
+DEADLINE: <2025-12-08 Mon>
+** INBOX logをブログに出すときのアイデア
+DEADLINE: <2025-12-25 Thu>
+lispか何かでmdに出力する→細かい処理を書く
+ 
+** DONE dot Rに返信する 
+  Created on [2025-12-03 Wed 18:53]
+
+** INBOX 12月の定期買う
+** DONE dot Rに返信する 
+  Created on [2025-12-03 Wed 18:53]
+** DONE tips pageも作る
+** DONE tmp page も作る
+
+* Atcoder
+** NEXT [[https://qiita.com/drken/items/fd4e5e3630d0f5859067#%E3%81%93%E3%81%93%E3%81%BE%E3%81%A7%E8%A7%A3%E3%81%84%E3%81%9F%E3%82%89][AtCoder に登録したら次にやること ～ これだけ解けば十分闘える！過去問精選 10 問 ～ #競技プログラミング - Qiita]]
+*** [[https://zenn.dev/nkncru/scraps/c1d28ee1efe465][AtCoder入門する]]
+*** ローカルの実装
+- https://colab.research.google.com/drive/1J6BAVLpxF7NUG7TpjGW15buFKaIaqvcf#scrollTo=699aADgKAiS9
+  
+
+* ARCRA_OCR
+** HOME
+** NEXT プロトタイプ開発
+    - 残タスク
+    - [x]  傾き補正　2
+      - ある程度簡単にできそう
+	- https://qiita.com/nrnrk/items/7aecba89ffb02f0b8d12
+	  - この手法だけでやったところ，画像の背景の色によって輪郭の検出精度に波がある→手法の改善が必要かも
+    - [ ]  傾き修正の改善5
+      - 方法は？
+    
+    - [ ]  OCR文字抽出　3
+      - 精度次第ではある，これはこっちが頭を使う部分はほとんどない，
+      - 抽出後の処理がだるい
+    - [ ]  正規表現　4
+      - postprocess
+      - 正規表現にするってどゆこと？？
+        
+    - [x]  json出力　1
+      - 処理自体は機械的なはず．適当な正規表現を与えてふぁいるに出力できればOK
+	- staticメソッドで良いだろう．
+	- jsonとして正規化された何らかのオブジェクトが渡されるはずだが，この引数の型が定まっていない
+	  - 正規化されているオブジェクト，みたいな感じのジェネリックなもので関数を書けばいい？mapならiterableを受け取ることができるが．．
+	  - 画像1枚に対して1つの複数階層の正規表現が得られるはずなので，1入力で1jsonファイルのメソッドを作る．
+	  - なので入力は正規化されたなにか
+	  - 出力はjsonオブジェクト
+	- ~~これと別にjsonオブジェクトとpathをうけとって書き込むモジュールを作成する．~~
+
+** INBOX deep使う側も開発
+** something..
+** archive
+## Memo
+
+- [ ]  
+
+### 当面の予定
+
+20h/w
+
+## Documents
+
+こにプロジェクト特有のドキュメントのデータベースを置く
+
+[めも](https://www.notion.so/2ad1fbe7470a80dabad1d89a6574eb74?pvs=21)
+
+[Untitled](https://www.notion.so/2ad1fbe7470a8014babcca7b46bdb4d6?pvs=21)
+
+## Paper
+
+# LOG
+
+# 1116
+
+### ARCRA
+
+- 18；00-（1）帳票用OCR付きpython プログラム作成　に着手
+    - 20:00カフェ閉まるまで作業した
+
+---
+
+- [x]  ~~環境構築~~
+- [x]  ~~プロトタイプ開発~~
+    - ひとまず動きそうなものを作って出すこと
+        - 画像を読み込んでOpenCVで傾きを自動で検出して補正する（線形変換によって可能）
+        - OCR処理→文字起こし
+        - json形式で出力→出力ファイル名は暫定的にout_<imput_image_name>.pngとしておく
+        - 
+    - **いまやっていることは、最初に書いたゴールと一致している？（YES/NO）**
+        - プロトタイプ四割完成度で出すことが今一番重要
+        - 同時にこのプロトタイプのREADMEも書いておくことでアピール
+            - 評価を上げるため
+            - 後が楽になるため
+            - 
+    - **もしNOなら：いまやるべきことはどれ？（書き直す）**
+    - **気が散りそうな気配はある？（0〜5で）**
+        - 後1時間でこの店が閉まるのでその後どうするか．
+    - **いま続けるために1つだけするべき行動は？**
+- [ ]  画像の前処理（傾き補正とグレイスケール変換）
+    - ゴールと一致している？
+        - してなかった
+    - 今やるのは優先順位的にはjsonの書き出しモジュール
+- [x]  json書き出し
+- [ ]  
+
+---
+
+- ~~環境構築~~
+    - 構成ディレクトリも作成完了．
+        
+        ドキュメントに記載の通り以下
+        
+        ```cpp
+        test_ocr_for_doc1/
+          ├─ main.py（エントリポイント）
+          ├─ documents/
+          │   ├─ readme.md（環境構築手順、pipインストール手順含む）
+          │   └─ images/（サンプル帳票画像）
+        
+        ```
+        
+    
+    pythonの環境はおそらくtest for doc N ごとに分けた方が良いのでそのようにした．
+    
+    - 環境構築　pyenv
+    - 私が行ったコマンド
+        
+        ```cpp
+        nkn4ryu@nakanoshisatsus-MacBook-Pro test_ocr_for_doc1 % pyenv install 3.11.9
+        python-build: use openssl@3 from homebrew
+        python-build: use readline from homebrew
+        Downloading Python-3.11.9.tar.xz...
+        -> https://www.python.org/ftp/python/3.11.9/Python-3.11.9.tar.xz
+        Installing Python-3.11.9...
+        python-build: use readline from homebrew
+        python-build: use zlib from xcode sdk
+        Installed Python-3.11.9 to /Users/nkn4ryu/.pyenv/versions/3.11.9
+        nkn4ryu@nakanoshisatsus-MacBook-Pro test_ocr_for_doc1 % pyenv virtualenv 3.11 orc_test1
+        nkn4ryu@nakanoshisatsus-MacBook-Pro test_ocr_for_doc1 % pyenv virtualenv orc_test1
+        pyenv-virtualenv: `/Users/nkn4ryu/.pyenv/versions/orc_test1' already exists.
+        nkn4ryu@nakanoshisatsus-MacBook-Pro test_ocr_for_doc1 % pyenv local orc_test1 
+        (orc_test1) nkn4ryu@nakanoshisatsus-MacBook-Pro test_ocr_for_doc1 % 
+        ```
+        
+        まとめると
+        
+        ```cpp
+        pyenv install 3.11
+        pyenv virtualenv orc_test1
+        pyenv local orc_test
+        ```
+        
+    - 必要ライブラリのインストール　tesseract，ーlang
+
+- プロトタイプ開発
+    - 残タスク
+    - [x]  傾き補正　2
+        - ある程度簡単にできそう
+            - https://qiita.com/nrnrk/items/7aecba89ffb02f0b8d12
+                - この手法だけでやったところ，画像の背景の色によって輪郭の検出精度に波がある→手法の改善が必要かも
+    - [ ]  傾き修正の改善5
+    
+    - [ ]  OCR文字抽出　3
+        - 精度次第ではある，これはこっちが頭を使う部分はほとんどない，
+        - 抽出後の処理がだるい
+    - [ ]  正規表現　4
+        - postprocess
+        - 正規表現にするってどゆこと？？
+        
+    - [x]  json出力　1
+        - 処理自体は機械的なはず．適当な正規表現を与えてふぁいるに出力できればOK
+            - staticメソッドで良いだろう．
+            - jsonとして正規化された何らかのオブジェクトが渡されるはずだが，この引数の型が定まっていない
+                - 正規化されているオブジェクト，みたいな感じのジェネリックなもので関数を書けばいい？mapならiterableを受け取ることができるが．．
+                - 画像1枚に対して1つの複数階層の正規表現が得られるはずなので，1入力で1jsonファイルのメソッドを作る．
+                - なので入力は正規化されたなにか
+                - 出力はjsonオブジェクト
+            - ~~これと別にjsonオブジェクトとpathをうけとって書き込むモジュールを作成する．~~
+
+- 優先順位
+    - 最下位→→OCRから正規表現の作成について何も知見も情報もない．
+    - 他は簡単なものから
+        - 正規表現の書き出し+書き出しテスト
+        - 傾き補正
+        - OCR文字抽出
+        - 文字抽出から正規表現の作成
+
+- 帳票画像とは
+    
+    作業計画
+    
+    <aside>
+    💡
+    
+    完了後にpip freezeすること．
+    
+    </aside>
+    
+
+https://qiita.com/ksato9700/items/5d9eba10fe6b8e064178
+
+https://note.com/npaka/n/n597d1cea0432
+
+---
+
+### 傾き補正の実装
+
+とりあえず現状のテスト実装をクラスとして実装したい，
+
+一方でこの手法にはすでに欠陥が見つかっていて，手法をどんどん改良していくと思われる
+
+よってます処理のステップごとに入出力を明確にした型アノテーションを徹底すること．
+
+またstrategyパターンっぽく実装していつでも新しい手法に切り替えられるような設計にしたい．
+
+手法の改良は現在優先順位が低いので，変更に強い設計で書くことを重視して，ひとまずはすでにある方法を整理して欲しい．ステップごとに，staticにしても良いし，とにかくstrategyパターンを意識する．
+
+→プロンプトが悪かったのかうまくいかなかったので自力で実装することにする．その方が早そう．
+
+$sss$
+
+$aaa$
+
+$dc$. sss a 
+
+$$
+ww
+$$
+
+
+** 参考
+- [[https://qiita.com/ryome/items/16fc42854fe93de78a23][画像から文字を瞬時に読み取る！Tesseractとpytesseractの驚異の力【Python】 #Python3 - Qiita]]
+- [[https://qiita.com/kenshin-627/items/098703383374e1e7b65b][Pythonで画像のエッジ検出と直線検出をする #Python3 - Qiita]]
+- [[https://qiita.com/nrnrk/items/7aecba89ffb02f0b8d12#%E4%BA%8C%E5%80%A4%E5%8C%96%E3%81%AE%E9%96%BE%E5%80%A4%E6%B1%BA%E5%AE%9A][OpenCVを使って免許証を角度補正(射影変換)する-二値化の閾値も自動で決定- #Python - Qiita]]
+- [[https://qiita.com/nabechi6011/items/3a367ca94dbd208efcc7][Tesseract+PyOCRで簡易OCRを試してみる #Python - Qiita]]
+- https://github.com/tesseract-ocr/tesseract
+- https://www.notion.so/ARCRA-project-2ac1fbe7470a80919846fcd70a64c3cc?source=copy_link
+  
+** INBOX 開発のパワポを作成すること 
+  Created on [2025-12-03 Wed 01:30]
+** INBOX 正規表現の定義がしっかりしないと話が次に進まない 
+  Created on [2025-12-03 Wed 01:46]
+
+* Volmetric
+
+
+
+** NEXT shiftcalcの実装[1/4]
+*** DONE CaseA
+*** NEXT CaseB
+DEADLINE: <2025-12-09 Tue>
+**** NEXT計算の要件をまとめること
+*** NEXT CaseC
+*** NEXT 詳細の設計
+** INBOX shift calc review
+** INBOX windows python ocrの設計
+++** INBOX linuxの開発できないの？++
+
+** TASK整理@1121
+currently working
+*** DONE カレンダーとタイムスロットの設計
+**** DONE 設計
+**** DONE test
+***** DONE calendar test
+:LOGBOOK:
+CLOCK: [2025-11-21 金 10:35]--[2025-11-21 金 11:33] =>  0:58
+:END:
+
+９このテストがある
+1. Timeslot and working day, time check 
+2. Sort timeslot
+3. skipp timeslots of other days
+4. Holiday test
+5. CalculateTotalWorkingTime は区間ごとの重なりを正しく合算する（部分重なり含む） ことを期待している
+   現在上記の期待を満たすように実装されていないのでテスト失敗する
+6. 日をまたぐスロットが入っているときに，それが被る日が正しくWorkingDayとなるかの確認
+7. getNext TimeSlot
+8.
+9.
+***** DONE timeslot
+*** TODO シフト計算
+SCHEDULED: <2025-11-29 土>
+
+**** TODO 一番簡単な実装を行う
+
+**** DONE 設計
+SCHEDULED: <2025-11-21 金>
+strategy で実装したい
+Calculator自体の設計はOK.あとはテストをもっとガンガン回せるようにするための工夫と，
+詳細設計→まだ細かいことは何も考慮できていない．
+**** DONE proto 実装
+SCHEDULED: <2025-11-22 土>
+**** DONE テスト
+*** TODO 詳細設計
+**** TODO これは打合せするしかない
+
+
+
+** 1209
+*** LOG
+1250ごろに起床，1345に出発，
+1409に volmetric出勤
+
+** 1204
+1600作業開始
+
+CaseAひとまず動くようになった．
+*** DONE CaseAの確認
+*** DONE 簡単な説明
+- 1651とりあえず今日volの作業は終わり．
+
+  
+***  CaseBに進める？
+
+
+*** LOG
+やっぱりちゃりで運動した後は全然違う
+スマホを家に持ち込まない．簡単なことでかなり状況は変わるかもしれない
+情報を入れながら考え事をしてはいけない
+
+
+
+** 1203
+1400- vol作業
+case1の実装に進んだ
+実装メモ
+- case 1
+
+ やるべき処理
+
+タイムスロットごとに
+  開始時刻，終了時刻を取得する
+  現在のノードを取得する
+  現在の時刻を取得する→これは開始時刻と同じでよい
+
+while(現在時刻＋ 次のノードへ移動するまでにかかる時間＜タイムスロットの終了時刻)
+  ループに沿って次のにーどにすすむ
+  現在時刻をノード移動にかかる時間分足す
+
+次のスロットを取得する．これを続ける．
+
+
+異常終了
+
+
+終了条件
+
+
+ 
+
+
+- case 2
+
+- case 3
+
+
+
+来年の目標
+つくちゃれから論文を書く
+
+** 1127
+*** LOG
+5日間があいてしまうとかなり効率が下がる
+考える時間だけでも入れておくべきだった．
+https://p.secure.freee.co.jp/yearend_adjustments#/2025/for_employees/1976990/introduction
+
+設計をミスっている？それは前回直している
+Shiftcalculatorはほぼ一つの仕事しかしなくて，それはカレンダーとそのほか必要情報を読み込んで，
+シフト計算を実施し，必要であれば情報を書き込んだカレンダーと ShiftResult を返す．
+
+その時の Calculate は， ICalculateStrategyに委譲していて，この内部実装がいろいろと変わることによって計算内容が変化する
+
+
+**** TODO IShiftResult and Shift Result
+What I dont know is the mechanism of IShiftResult and its implementation ShiftResult
+**** DONE Ishifr Calc test
+**** TODO constraint imple
+**** TODO  result attribute imple
+**** TODO  shift calc constructor
+**** TODO imple practical attributes and test them
+I tried to directly imple IShiftResultAttribute and that was very goot attitude.
+By doing so, i  can  deeply understand how to use it and get used to them.
+**** TODO after testing
+**** TODO  Calc constant paying in a month
+*** 他
+++パスポートの写真の取り直し++
++メールの作成 メールの返信+
++amazon の返品+
++ARCRAと研究とgxpを何とかしなくては+
+
+** 1122
+パスポートの写真の取り直し
+メールの作成 メールの返信
+ amazon の返品
+
+ 
+
+*** LOG
+昨日の続き
+SampleShiftCalculator.cs
+
+shiftcalculatorがすべきでない仕事を外部に出す必要がある
+shiftcalcは呼び出し元でしかないはず
+
+strategyとしての実装のし直しに時間がかかりそう
+
+だいぶ実装が変わった．
+shiftcalculatorはかなりシンプルになって，calculateを呼び出すだけになった．
+実際の計算は，strategy.calculate()に委譲している．
+
+いったん，ほかの Attribute とかを実験で使ったほうがいい．使われ方が全然想像つかないのは大きな問題
+
+** 1121
+*** LOG
+- 1030-
+  testからみ返す
+  1055, 1終了
+  コードを読んだほうが早い時も多い
+  1117 complete 2 through 6
+  1140 all complete
+   rest
+- 1140-1213 脳死．．
+- 1330-1419
+  strategy patternについて調べもの
+  https://zenn.dev/xurenjun/articles/0e0474530841b8#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB
+  つぎは本
+- 1420-1432 読み終えた．
+- 1432-1442 次は中村さんの実装
+ IConnectedLoops: 出力するILoopの実装
+ IConnectorWithTwoLoop: IEnumerable<IConnectedLoop>を返す
+ ILoopConnector: Strategy Interfaceとしての，ループ結合
+ LoopConnecter/StrategyAdopterWithTwoLoop.cs: ConcreteStrategy
+- 1445-
+  shiftcalclator
+- 1500 strategyとして実装を始める
+  まずはプロンプト書いてみる
+  1530-ちゃんと考えてみる
+- 1534 実装に移っている
+- 1709 実装はかなり進んでいるsampleを今日中に終わらせる予定だったが，明日までかかりそう．
+  -
+
+あしたはこれを見ながらShiftCalculator.csを実装してテストケースを走らせるところまではやる．それが終わったら，ConnectedLoopに対応する．
+そこまで
+    https://claude.ai/chat/dd1786ff-b4ef-432e-802b-3b2d828d3bdd
+
+*** strategy pattern
+SCHEDULED: <2025-11-21 金>
+実行時にアルゴリズムを選択することができる
+
+例えば
+二人対戦ゲーム
+プレイヤーはいくつかの属性がある(HP,MP,POWER，INTELLIGENCE,etc)
+プレイヤーは一つだけスキルを持つ．
+スキルの種類は複数ある．
+例えば，
+- パンチング」：相手に強力なパンチを与えて、「自身の力 - 相手の防御力」のダメージを与える。
+- エネルギーボルト」：MPを5ポイントを消費して、防御力を無視するエネルギーの凝縮体を発射して、「自身の知力 x 2」のダメージを与える。
+
+
+#+begin_src csharp
+  var player1 = new Player("戦士", Skill.Punching);
+var player2 = new Player("メイジ", Skill.EnergyBall);
+new Battle(player1, player2).Start();
+
+public enum Skill
+{
+	Punching,
+	EnergyBall
+}
+
+public class Player
+{
+	public int Hp { get; private set; } = 30;
+	public int Mp { get; private set; } = 30;
+	public int Strength { get; } = 30;
+	public int Intelligence { get; } = 10;
+	public int Defense { get; } = 15;
+	public string Name { get; init; }
+	public Skill Skill { get; init; }
+
+	public Player(string name, Skill skill)
+	{
+		this.Name = name;
+		this.Skill = skill;
+	}
+
+	public void Attack(Player targetPlayer)
+	{
+		var damage = 0;
+		switch (this.Skill)
+		{
+			case Skill.Punching:
+				Console.WriteLine($"「{this.Name}」が「{targetPlayer.Name}」に対して、「パンチング」スキルを発動した！");
+				damage = this.Strength - targetPlayer.Defense;
+				targetPlayer.LostHp(damage);
+				Console.WriteLine($"「{this.Name}」が「{targetPlayer.Name}」に対して、{damage}のダメージを与えた！");
+				break;
+
+			case Skill.EnergyBall:
+				Console.WriteLine($"「{this.Name}」が「{targetPlayer.Name}」に対して、「エネルギーボルト」スキルを発動した！");
+				damage = this.Intelligence * 2;
+				LostMp(5);
+				targetPlayer.LostHp(damage);
+				Console.WriteLine($"「{this.Name}」が「{targetPlayer.Name}」に対して、{damage}のダメージを与えた！");
+				break;
+		}
+	}
+
+	public void LostMp(int mp) => this.Mp = (this.Mp > mp) ? this.Mp - mp : 0;
+	public void LostHp(int hp) => this.Hp = (this.Hp > hp) ? this.Hp - hp : 0;
+}
+
+public class Battle
+{
+	private List<Player> Players = new List<Player>();
+
+	public Battle(Player player1, Player player2)
+	{
+		this.Players.Add(player1);
+		this.Players.Add(player2);
+	}
+
+	public void Start()
+	{
+		var turnIndex = 1;
+		while (Players.All(player => (player.Hp > 0)))
+		{
+			turnIndex = (turnIndex == 0) ? 1 : 0;
+			PlayerTurn(turnIndex);
+		}
+
+		Console.WriteLine($"試合終了！勝者は「{this.Players[turnIndex].Name}」！！！");
+	}
+
+	private void PlayerTurn(int playerIndex)
+	{
+		var attackingPlayer = this.Players[playerIndex];
+		var attackedPlayer = this.Players[(playerIndex == 0) ? 1 : 0];
+		Console.WriteLine($"「{attackingPlayer.Name}」のターン！");
+		attackingPlayer.Attack(attackedPlayer);
+		Console.WriteLine($"「{attackedPlayer.Name}」が攻撃を受けて、残りのHpは{attackedPlayer.Hp}。");
+	}
+}
+#+end_src
+
+上記実装だと，プレイヤは内部変数でskillのEnumを持つ
+skillのEnumの値に応じて，PlayerのAttack関数の中でswitch構文によって条件分岐がされている．
+
+>この「Attack」メソッドを修正して、新しいスキルの分岐を追加しないといけないので、
+修正が既存のすべてのスキルに影響を与える可能性がありますので、怖いですね。。。!
+とある．
+
+ではパターンを適用するとどうなるのか？
+
+実行時に選択するアルゴリズム
+＝異なるスキルを持つプレイヤで実行するときのAttack関数の内部処理
+
+戦略クラス
+
+
+#+begin_src csharp
+  var player1 = new Player("戦士", new Punching());
+var player2 = new Player("メイジ", new EnergyBall());
+new Battle(player1, player2).Start();
+
+public interface Skill
+{
+	public void Attack(Player attackingPlayer, Player attackedPlayer);
+	public string GetSkillName();
+}
+
+public class Punching : Skill
+{
+	public void Attack(Player attackingPlayer, Player attackedPlayer)
+	{
+		var damage = attackingPlayer.Strength - attackedPlayer.Defense;
+		attackedPlayer.LostHp(damage);
+		Console.WriteLine($"「{attackingPlayer.Name}」が「{attackedPlayer.Name}」に対して、{damage}のダメージを与えた！");
+	}
+
+	public string GetSkillName() => "パンチング";
+}
+
+public class EnergyBall : Skill
+{
+	public void Attack(Player attackingPlayer, Player attackedPlayer)
+	{
+		var damage = attackingPlayer.Intelligence * 2;
+		attackingPlayer.LostMp(5);
+		attackedPlayer.LostHp(damage);
+		Console.WriteLine($"「{attackingPlayer.Name}」が「{attackedPlayer.Name}」に対して、{damage}のダメージを与えた！");
+	}
+	public string GetSkillName() => "エネルギーボルト";
+}
+
+public class Player
+{
+	public int Hp { get; private set; } = 30;
+	public int Mp { get; private set; } = 30;
+	public int Strength { get; } = 30;
+	public int Intelligence { get; } = 10;
+	public int Defense { get; } = 15;
+	public string Name { get; init; }
+	public Skill Skill { get; init; }
+
+	public Player(string name, Skill skill)
+	{
+		this.Name = name;
+		this.Skill = skill;
+	}
+
+	public void Attack(Player targetPlayer)
+	{
+		Console.WriteLine($"「{this.Name}」が「{targetPlayer.Name}」に対して、「{this.Skill.GetSkillName()}」スキルを発動した！");
+		this.Skill.Attack(this, targetPlayer);
+	}
+
+	public void LostMp(int mp) => this.Mp = (this.Mp > mp) ? this.Mp - mp : 0;
+	public void LostHp(int hp) => this.Hp = (this.Hp > hp) ? this.Hp - hp : 0;
+}
+
+// Battleクラスは変更ないので割愛します。
+#+end_src 
+
+この実装にした場合には，Skillが増えた場合の追加実装が楽になる
+
+#+begin_src csharp
+  var player2 = new Player("俺は悟空", new SpiritBomb());
+public class SpiritBomb : Skill
+{
+	public void Attack(Player attackingPlayer, Player attackedPlayer)
+	{
+		var damage = 100;
+		attackedPlayer.LostHp(damage);
+		Console.WriteLine($"「{attackingPlayer.Name}」が「{attackedPlayer.Name}」に対して、{damage}のダメージを与えた！");
+	}
+
+	public string GetSkillName() => "元気玉！投げる(っ'-')っ>>>ﾌﾞｫﾝ";
+}
+#+end_src
+
+
+本質的な違いは
+そもそも異なるskillを持っているプレイヤーに対して，持たないskillの情報を与えないということ．
+リファクタリング前は，すべてのplayerはすべてのskillについての情報を持ち，それに応じて条件分岐する必要があった．
+後では，そもそもplayerはattack(), getSkillNameをもつskill interfaceを実装したものをもつだけで，
+自分が持たないskillについての知識はいらない．
+
+
+
+
+
+
+
+
+探索ゲーム
+プレイヤーは，
+
+**** TODO あとで，給料のシミュレーションをする
+
+*** まとめ
+だいぶ仕事が進んだ日だった気がする．
+うまく言った理由を考えてみると
+- 仕事以外の時間で割と設計のことは考えていた
+- 自分でコードを書く時間が長かった．先にLLMに全部投げするとこうはならない．先に簡単な例をつくって置くといいかもしれない．
+- 睡眠時間は関係しないっぽい
+- 完成品を作るというよりは，さらにその先に梃子が聞くような部分を優先的に開発できたことがよかった．
+  test codeが動けばよいのではなくて，test caseほかのにも簡単に使えそうな関数を作ろうとしてたのはよかった．
+- 14~15くらいに，実装をきっちり読んでまとめた時間が効いた
+  inputの質が高まると結局outもよくなる．この考え方がよい．
+- あと姿勢が良いのは大切化も
+  
+** 1114
+Calenadrの実装
+
+TimeSlot
+SlotInfo
+IWorkingalendar
+
+*** インターフェースとその実装について
+Graph, Igraphは分かれていたので，カレンダーも同じように分けてもOKか
+
+
+*** カレンダーのユースケース洗い出し
+
+**** カレンダー→シフト計算
+
+
+**** シフト計算→カレンダー
+ConnecterOnOneNode.ConnecterWithOffsetWithOperationType(graph);
+*** DONE 現状の把握
+SCHEDULED: [10-04-2025]
+
+自分がいなくなる前の打ち合わせ
+https://im8dhtvp.sharepoint.com/:w:/r/sites/group.nara_optimization/files/%E5%86%85%E9%83%A8%E6%89%93%E5%90%88%E3%81%9B%E8%B3%87%E6%96%99/2025%E6%89%93%E3%81%A1%E5%90%88%E3%82%8F%E3%81%9B%E3%83%A1%E3%83%A2/250719%E6%89%93%E3%81%A1%E5%90%88%E3%82%8F%E3%81%9B%E3%83%A1%E3%83%A2.docx?d=wbe588f0ca447406d8020d85c9bae6ab4&csf=1&web=1&e=aswgV8
+
+
+中村さんがグラフ表示の部分を力学アルゴリズムで実装してくれている
+→確認した部分は以下
+
+    コミット: a014f88f0f28b7de560d8c9f6b90b772564fb0c1 [a014f88]
+    親: d3b9bc680a, 19a2d6efa9  
+    作者: nakamurahinata <nakamura.hinata@volumetric.jp>
+    日時: 2025年10月3日 13:26:59
+    コミット者: nakamurahinata
+
+*** DONE emacs or vscode org 
+   SCHEDULED: [10-04-2025]  
+
+
+
+
+
+
+
+* Arcanain2025
+** INBOX 自分の開発部分をまとめたページをqiita で作ってみること
+他のページへのリンクも使って分かりやすいように説明すること
+** DONE linkedinのページ作ってみた 
+*** 下書き
+Working mainly as a software engineer.
+自律走行ロボットのソフトウェア開発に従事し、ROS2 を用いた各種モジュールの設計・実装・検証を担当。
+ロボットの制御・計画・ローカライゼーション機能の開発を中心に、実機実験による改善サイクル、研究論文に基づく最新手法の実装、GitHub ベースのチーム開発にも取り組んでいます。
+
+主な担当内容：
+
+- ROS2（C++）を用いたロボット制御ソフトウェアの開発
+- 自律走行ロボットにおける計画・制御・ローカライゼーションモジュールの実装と最適化
+- 実機実験による挙動検証と改善
+- 最新研究論文の調査・アルゴリズムの実装・性能評価
+- GitHub を用いたチーム開発環境での設計・コードレビュー
+- 少人数チームでのリモート開発、および必要に応じた現地での実機検証
+
+代表的な成果：
+
+- 自律走行ロボットのための新規モジュールをフルスクラッチで設計・実装（詳細は後日リンク追加予定）
+
+
+
+Responsible for developing software for autonomous mobile robots, primarily focusing on ROS2-based system design, implementation, and optimization.
+My work spans control, planning, and localization modules, integrating experimental validation, applying methods from recent research papers, and collaborating through GitHub-driven team development.
+
+Key responsibilities:
+
+- Development of robot control and navigation software using ROS2 (C++)
+- Implementation and optimization of planning, control, and localization modules for autonomous robots
+- Conducting real-world experiments and iterative performance improvements
+- Researching and implementing cutting-edge algorithms based on recent academic papers
+- Collaborative development in a small engineering team using GitHub workflows
+- Remote-first work style with on-site sessions for hardware experiments
+
+Notable achievement:
+
+- Designed and implemented a new ROS2-based module from scratch for an autonomous robot (link to be added)
+
+
+
+
+#+begin_src 
+#+end_src
+
+#+begin_src
+  了解！では、あなたの LinkedIn「Experience（経験）」欄に最適な文章を作るために、**必要な情報をインタビュー形式で質問**します。
+答えていただいた内容をもとに、**英語・日本語どちらでもプロフェッショナルな文章**を作成します。
+
+---
+
+# 🔍 まず確認したい質問（5つだけ）
+
+## **1. 会社での正式な役割は？**
+
+例：Software Engineer / ML Engineer / Robotics Engineer / Research Assistant など
+
+---
+
+## **2. 主な業務内容は？（複数OK）**
+
+可能な限り具体的に書いてください
+例：
+
+ ROS2ベースの自律走行ロボットの制御ソフトウェア開発
+ 生産ラインシミュレータのC#実装
+ データ解析、レポーティング
+ Web開発 など
+
+---
+
+## **3. 使用した主要技術スタックは？**
+
+例：C++, ROS2, Python, C#, .NET, Docker, GitHub Actions, AWS など
+
+---
+
+## **4. 特にアピールしたい成果・プロジェクトは？**
+
+例：
+
+ ロボットのLocalization Switcherを設計し切り替え精度を向上
+ 工場スケジューラのShiftCalculatorを開発し処理速度を◯%改善
+ データ分析基盤を構築
+ 新規機能をフルスクラッチで実装 など
+  （小さくても大歓迎）
+
+---
+
+## **5. 仕事のスタイルは？**
+
+例：完全リモート / ハイブリッド
+チーム人数や役割ももしあれば
+例：
+
+ 3名チームのリード
+ 個人プロジェクトとして推進
+ 海外メンバーと協業
+
+---
+
+質問は以上です！
+この5つに答えていただければ、LinkedInに最適な「経験」欄を:
+
+ **簡潔バージョン**
+ **詳しいバージョン**
+ **英語版 / 日本語版**
+
+すべて生成します。
+
+どうぞ、ひとつずつでOKなので答えてください！
+
+#+end_src
+** INBOX ocrの部分実装する
+** DONE [#A] パワポ提出 
+DEADLINE: <2025-12-02 Tue>
+  Created on [2025-12-02 Tue 20:28]
+** NEXT つくちゃれシンポジウムレポート
+DEADLINE: <2025-12-28 Sun>
+** NEXT LT大会のパワポ
+** INBOX ポスター
+** INBOX revirew
+** INBOX 振り返り
+- マクロ
+  - 実験走行がほとんどできなかった
+  - 年間通したマイルストーンの計画が甘い
+- ミクロ
+  技術的な話
+  - fixしてない部分で自己位置が破綻した
+    昨年と同じような結果
+
+いつまでにどこまでできていなければならないかをはっきり決めておくべきだった．
+来年どうする？
+もう1台使いたい．
+
+* B4
+** HOME
+- [[https://drive.google.com/drive/folders/1QNRvYGVm0U4zvkBm2daSUISN1Q8u-ZTZ?usp=drive_link][google drive]]
+- 
+** INBOX SGLD周辺の文献
+DEADLINE: <2025-12-08 Mon>
+  Created on [2025-12-02 Tue 21:04]
+  - https://www.di.ens.fr/appstat/spring-2022/lecture_notes/SGLD.pdf
+  - [[https://yhayato1320.hatenablog.com/entry/2022/01/09/201820][【深層学習】Stochastic Gradient Langevin Dynamics / SGLD - オムライスの備忘録]]
+  - https://openreview.net/forum?id=CPKMwyiyDv
+  - [[https://data.gunosy.io/entry/mcmc-sgld-edward][【Edward】MCMCの数学的基礎からStochastic Gradient Langevin Dynamicsの実装まで - Gunosyデータ分析ブログ]]
+** INBOX SLT周辺[0/9]
+- [ ] [[https://arxiv.org/abs/2511.16893][[2511.16893] Predicting the Formation of Induction Heads]]
+- [ ] [[https://arxiv.org/abs/2506.11135v1][[2506.11135v1] Large Language Models and Emergence: A Complex Systems Perspective]]
+- [ ] [[https://arxiv.org/abs/2511.15419][[2511.15419] Singular Learning Theory for Factor Analysis]]
+- [ ] [[https://openai.com/index/understanding-neural-networks-through-sparse-circuits/][Understanding neural networks through sparse circuits | OpenAI]]
+- [ ] [[https://arxiv.org/abs/2307.02129][[2307.02129] How Deep Neural Networks Learn Compositional Data: The Random Hierarchy Model]]
+- [ ] [[https://arxiv.org/abs/2510.24256][[2510.24256] From Memorization to Reasoning in the Spectrum of Loss Curvature]]
+- [ ] https://openreview.net/pdf?id=5JcDVsV8pf
+- [ ] [[https://joisino.hatenablog.com/entry/heads][LLM のアテンションと外挿 - ｼﾞｮｲｼﾞｮｲｼﾞｮｲ]]
+
+** INBOX 桂井先生に計画案を送る
+DEADLINE: <2025-12-08 Mon>
+*** 内容
+- 進捗について
+  - 前回からの進捗．ある仮説みたいのがあって，それが内部表現のモジュールの双発から説明したい．
+  - 岡田先生
+- 決定事項
+  - 今度中西先生と話す．卒論でうまくいかなかったら一橋でやってもいいかも．
+  - その場合についても早めに先生と相談することが大切．
+*** NEXT 重要タスク→今の研究の方針と解析の方法を考えたのでこれを言語化する．
+  →中西先生からコメントをもらうため．
+  - 必要な文献を集める．まとめる．
+  - **何かあったら必ずお礼を言うこと**
+  - 示したいこと仮説
+  - その背景，仮説の根拠
+  - 解析手法の参考文献
+  - それら組み合わせて何する？
+  - やってみた．
+  - 何に困っているか？
+    - かせつがアタオカではないかどうか
+    - 解析に論理的破綻がないかどうか
+    - わざわざLLC使う必要があるのか？
+      
+*** 文献リストだけ作る
+- 背景
+  - critical period (重要度C)
+  - DSBの論文群
+    - increasing complexity
+ここまでで「」と言う仮説に至る．
+ではどうやって明らかにするか．の手法を探しているときに，
+differential 論文を見つけた．→これだけで飛びつくのは甘い？？
+
+- 実験・手法
+  - increasing complexityのmethod
+  - LLC, rLLCの論文
+  - 
+- 
+1
+
+** NEXT 相談資料兼ゼミ発表(12/12)に向けて
+中西先生に相談することを決める
+
+そもそも自分は何考えている？→まとめてみる
+それをvomit法で書き出してから，あとで文献リスト作ったり，必要なことを勉強したりする．
+
+何を相談したい？具体的なこと．
+
+
+
+*** NEXT 先行研究をまとめる
+**** NEXT 先行研究のうち，early phase of learning dynamicsらへん，つまり現象の方
+**** NEXT 先行研究のうち，解析手法側→LLC, rLLC
+*** NEXT diff論文をまとめる
+**** 理由：transformerの内部構造の時間発展を追う先行研究として
+CNNでやった場合に画像モデルの学習過程→distribution simplicity bias
+*** NEXT 解析手法をまとめる
+**** rLLCのdiffの研究 + optimal transportの研究設計→→→ここが一番重要
+**** 何が分かる？
+**** 何が言えそう
+**** どんなイメージがついているのか？
+
+*** 追加
+**** DSBの後続研究を調べる
+**** 想定質問？
+
+
+
+
+
+
+* ARCANAIN2026
+* アクチュアリーの勉強
+* 一橋ブートキャンプ
+* 統計検定
+* 修士の準備
+* 簿記3
+* 簿記2
+* 奨学金など
+** 研究でお金もらうやつ
+** 返還手続き
+在学猶予せずに修士の間に奨学金を借りることは可能？
+** DONE リレーロ講座の登録
+** DONE メアド変更
+** INBOX 返還猶予
+DEADLINE: <2026-01-31 Sat>
+** INBOX 
+** 卒業後に，学部時代に借りた奨学金が一部免除になる可能性は？
+→研究業績などは？
+** GPTリンク
+https://chatgpt.com/c/6938eda6-9414-8320-8e4c-96cfc42ac3db
+
+** 質問への返答
+1. はい借りるつもりです．ただ，第1か2かは未定です．
+   修士で借りる場合は，返還しながら借りることは可能ですか？つまり返還猶予せずに借りるということです．
+2. 意図したものです．休学しました
+3. 口座は変更する予定です
+4. 4月入学が確定しています
+5. 変換については，基本一定で返したいですが，例えば業績などで一部減額や免除ができたらとは思っています．そのような制度はあるのでしょうか？
+
+** やること
+
+* 賃貸
+- ジェイリース保証委託
+  29000,10000,440
