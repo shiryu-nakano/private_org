@@ -36,6 +36,13 @@
 
 
 * LOG
+1250ごろに起床，1345に出発，
+1409に volmetric出勤→18時過ぎに退勤して，その後ぶらぶらした
+1930ごろにイオンのマクドナルドに来た．
+
+chatGPTを使って，今の研究分野についてDeepResearchさせたものの，
+正直自分が読んだ論文くらいしか見つけてきていない．プロンプトが悪いのかもしれない？
+とにかく，自分が持っている課題に対しては今思いついている手法を試すのがstraight forwardであることがわかってきたので，とにかく手を動かすこと．
 
 * タスク整理
 ** *研究*
@@ -103,8 +110,28 @@ google vision ocr の使い方とかを適当に調べて実装すること
 *** TODO 引き落としの金額とかをチェックしておくこと
 *** TODO 
 ** *routine*
+** 読み物
+*** INBOX [2310.06301] Dynamical versus Bayesian Phase Transitions in a Toy Model of Superposition
+*** INBOX [2308.12108v2] The Local Learning Coefficient: A Singularity-Aware Complexity Measure
+*** INBOX Daniel Murfet氏による特異学習理論(SLT)解説を読んだ感想」Interview Daniel Murfet on Universal Phenomena in Learning Machines — LessWron」
+*** INBOX [論文レビュー] Abstract Gradient Training: A Unified Certification Framework for Data Poisoning, Unlearning, and Differential Privacy
+- https://doshisha-iml-k.slack.com/archives/D08KF5H8KGF/p1765267578753069
+- 
+Singular Learning Theory — LessWrong
+
+「Deep Learning is Singular, and That's Good」論文とpyro実装を読む
+[2502.05475] You Are What You Eat -- AI Alignment Requires Understanding How Data Shapes Structure and Generalisation
 
 
+Neural networks trained with SGD learn distributions of increasing complexity
+SGD on Neural Networks Learns Functions of Increasing Complexity
+Neural networks trained with SGD learn distributions of increasing complexity
+
+Task-Specific Skill Localization in Fine-tuned Language Models
+
+Explosive neural networks via higher-order interactions in curved statistical manifolds | Nature Communications
+
+The cost of unmodeled biological complexity in artificial neural networks: Patterns
 
 * 所感
 

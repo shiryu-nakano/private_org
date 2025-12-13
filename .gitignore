@@ -2,6 +2,7 @@
 
 # Emacs backup files
 *~
+*.org~
 
 # Emacs auto-save files
 \#*#
