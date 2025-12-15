@@ -1,0 +1,181 @@
+#+title: 2025-12-13
+#+filetags: :daily:
+
+* 直近の予定締め切り
+
+* TASK
+
+* LOG
+** 2025-12-12 09:07  :B4:
+- vitについて調べる
+  - [ ] 文献を3つ見つけた．
+    これらはvitの発達段階に関係するもの．
+  - [ ] Emergence of Human-Like Attention in Self-Supervised Vision Transformers
+    視線がわかるなら，発達段階でもわかるのでは？
+    この論文で提案した学習手法がtureなら，その上で発達段階中の子供がどんなところを見ているのかもわかるし，その上で
+    モデルのLLCを見ることでモジュール文化が理解できるかもしれない？？？？？
+    [[https://resou.osaka-u.ac.jp/ja/research/2025/20250530_1][人工知能が人と同じ視線を獲得した！ - ResOU]]
+    - 情報量を最大化する自発的な学習を行ったビジョン・トランスフォーマー(ViT)と呼ばれる人工知能が、人間と極めてよく似た場所を見るように「育つ」ことを発見。
+    - 人間の脳がどのように視覚情報を処理し、どこに注意を向けるのかはまだ完全に理解されていないため、人間のような注意機構をAIで再現することは困難だった。
+    - ViTは、場面を「人や物の中心」、「人や物の全体」、「場面の背景」の3群に分解して注意を向けていることから、人間もViTのように世界を3群に分けて理解している可能性が示唆された。
+    - DINO法を使うと学習済みモデルの視点が人間に近くなる．
+    - [ ] attention headごとのクラスタリングをしたみたいだが，それはどうやってやったのか？
+
+   #+begin_src
+     attention head のクラスタリングは、各 attention head の注意行動を数値化 → 距離行列を作成 → 次元削減/クラスタリング手法で分類する流れで行われています。
+   #+end_src
+
+  - [ ] How Does Attention Work in Vision Transformers? A Visual Analytics Attempt
+    
+  - [ ] Teaching Matters: Investigating the Role of Supervision in Vision Transformers
+
+  - [ ] Does Object Binding Naturally Emerge in Large Pretrained Vision Transformers?
+    
+  - 調べる上でのめもなど
+    - パッチ埋込って何？
+    - オブジェクト結合って何？
+** 1400からvolmetric
+*** とはいえちょっと整理
+やることが積みあがってきた
+とにかく研究で，すぐやるべきことは一つで，diffの再実装を行うこと．
+そのためのステップを作っておく
+
+
+volはしたに書いてある通りのことをするだけ．
+
+arcraは少し複雑なので注意しつつやる．
+- test1
+  とりあえず終了   
+- test2
+  まだ終わっていないので環境構築だけでもやること．
+*** 1500-imple of case 2
+Firstly I have to imple TryGet
+
+ループの各ノード間の遷移を見て
+各OperationTypeを解析し
+それが加工処理ならTryGetMachineTimeSpan(machineId, (processId, processMapId))を呼び出す
+それが移動操作ならTryGetMoveTimeSpan(operation)を呼び出す
+すべての時間を合計してループ1周の所要時間を返す
+**** CaseA
+=== Shift Calculation Result ===
+
+LoopId: 33-34-16-64-55-63-11-17-44-35-33
+RepeatCount: 200
+TotalTime: 7.12:00:00
+StartDateTime: 2024/01/01 9:00:00
+EndDateTime: 2024/01/26 18:00:00
+TotalPeriod: 26 days
+OperatingDays: 20 days
+ProducedWorkCount:
+  w1: 420
+  w2: 200
+
+**** CaseB
+=== Shift Calculation Result ===
+
+LoopId: 33-34-16-64-55-63-11-17-44-35-33
+RepeatCount: 200
+TotalTime: 6.22:40:00
+StartDateTime: 2024/01/01 9:00:00
+EndDateTime: 2024/02/02 15:40:00
+TotalPeriod: 33 days
+OperatingDays: 25 days
+ProducedWorkCount:
+  w1: 400
+  w2: 200
+
+- 1540
+  最低限のcaseBの実装は終了した．
+  ここから詳細を詰めていく必要がある→整理
+  
+
+- 2330
+  自宅：
+  FP3の勉強してみる．資格試験の勉強の感覚を忘れてたのでやってみる．Ankiを使いながら
+
+* タスク整理
+- [X] ~~*振込 １６時になったらやる*~~ [2025-12-12]
+    - [X] ~~*京都銀行と中央信用金庫から引き出して郵貯に入れて，郵貯からアプリで振り込みする*~~ [2025-12-12]
+    - [X] 郵貯から振り込みを行う 郵便局に行ったほうが早い．ハンコないけど行けるのか？  
+- [ ] 書類など郵送する
+    - [ ] レターパックの送り方→ ポストでいけるポイ
+- [X] 本を返さないといけない
+    - [X] 今出川に行って返すか
+- [ ] 住民票入手する
+    - [ ] 方法調べる
+
+
+
+** 整理
+*** LAB
+- vit についての調べものをする
+- [ ] そもそもやりたいことは??
+  * https://chatgpt.com/g/g-p-68d0141abee88191a2375b9114c711ce-pjb4/c/6937d3e3-24c4-8327-9630-d9f3fa6d3e3f
+
+作業仮説：vitにおけるDSBはheadの分化と専門化によって説明できるのか？
+- [X] diff論文は完全再現可能かどうか確認する→github
+  この実験プロトコルが完全公開されているわけではなさそう
+  
+  
+- [ ] diff論文が完全に再現可能なら，そのうえでモデルだけを入れ替えて同様に推定してみるとどうなるか？
+- [ ] CNN系統の理解
+  - [ ] つくって理解したいが，そんな時間はあるのか？
+  - [ ] 0からDLの１にあった．本気ならやるべきだが，まずは結果を出すことが優先されるべきで，何とかして早く再現して，vitで回すべき
+- [ ] VITで回す実験について
+  - [ ] 
+
+うまいこと，実験と理論を並行する方法を見出さないとこれから厳しくなってしまうので注意すること
+まずとにかく回せるようにする
+
+まいにちどのくらいの時間を切り詰められるだろうか？
+寝る直前の時間を何かほかの時間にぶち込めるかな？
+
+
+*** Volmetric
+case1:
+シフトごとに初期状態に戻る想定
+
+case2:
+
+- [ ] それ以前に，TryGetMachineを使えていないので，基礎の部分からもう一度考え直して実装する．
+- ここはバイトでしかないのでしっかり基礎からやること
+
+*** ARC
+１２日から作業するとして，，，
+毎週２０時間やると？
+→４０時間なので８万円
+ここをしっかり決めておかないと卒業論文に間に合わなくなるので十分に注意すること
+
+*** MISC
+卒論の計画→空間制度→arc→勉強
+
+ルーティーンをなるべく固定すること
+
+
+
+
+
+https://timaeus.co/projects
+
+自分で何とかするしかない
+
+https://forbesjapan.com/articles/detail/86400
+
+
+https://forbesjapan.com/articles/detail/86400
+
+
+
+
+きょうやること
+あしたのvol, arcraのやることの整理ＴＯＤＯリスト
+研究，ステップ作成
+
+意思決定がはやい
+フレームワークが入っているから？
+いずれにしても熟考の積み重ねとトレーニング必要
+
+
+
+* 所感
+

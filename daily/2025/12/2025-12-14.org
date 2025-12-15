@@ -1,0 +1,136 @@
+#+title: 2025-12-14
+#+filetags: :daily:
+#+title: 2025-12-13
+#+filetags: :daily:
+
+* 直近の予定締め切り
+
+* TASK
+
+* LOG
+*** とはいえちょっと整理
+やることが積みあがってきた
+とにかく研究で，すぐやるべきことは一つで，diffの再実装を行うこと．
+そのためのステップを作っておく
+
+
+volはしたに書いてある通りのことをするだけ．
+
+arcraは少し複雑なので注意しつつやる．
+- test1
+  とりあえず終了   
+- test2
+  まだ終わっていないので環境構築だけでもやること．
+*** 1500-imple of case 2
+Firstly I have to imple TryGet
+
+ループの各ノード間の遷移を見て
+各OperationTypeを解析し
+それが加工処理ならTryGetMachineTimeSpan(machineId, (processId, processMapId))を呼び出す
+それが移動操作ならTryGetMoveTimeSpan(operation)を呼び出す
+すべての時間を合計してループ1周の所要時間を返す
+**** CaseA
+=== Shift Calculation Result ===
+
+LoopId: 33-34-16-64-55-63-11-17-44-35-33
+RepeatCount: 200
+TotalTime: 7.12:00:00
+StartDateTime: 2024/01/01 9:00:00
+EndDateTime: 2024/01/26 18:00:00
+TotalPeriod: 26 days
+OperatingDays: 20 days
+ProducedWorkCount:
+  w1: 420
+  w2: 200
+
+**** CaseB
+=== Shift Calculation Result ===
+
+LoopId: 33-34-16-64-55-63-11-17-44-35-33
+RepeatCount: 200
+TotalTime: 6.22:40:00
+StartDateTime: 2024/01/01 9:00:00
+EndDateTime: 2024/02/02 15:40:00
+TotalPeriod: 33 days
+OperatingDays: 25 days
+ProducedWorkCount:
+  w1: 400
+  w2: 200
+
+- 1540
+  最低限のcaseBの実装は終了した．
+  ここから詳細を詰めていく必要がある→整理
+  
+
+- 2330
+  自宅：
+  FP3の勉強してみる．資格試験の勉強の感覚を忘れてたのでやってみる．Ankiを使いながら
+
+
+** 10時ごろ起
+その後家の掃除などなどがあって1330でいまカフェ．なかなか時間が解ける
+→隔離するしかない
+
+** 
+* タスク整理
+- [X] ~~*振込 １６時になったらやる*~~ [2025-12-12]
+    - [X] ~~*京都銀行と中央信用金庫から引き出して郵貯に入れて，郵貯からアプリで振り込みする*~~ [2025-12-12]
+    - [X] 郵貯から振り込みを行う 郵便局に行ったほうが早い．ハンコないけど行けるのか？  
+- [ ] 書類など郵送する
+    - [ ] レターパックの送り方→ ポストでいけるポイ
+- [X] 本を返さないといけない
+    - [X] 今出川に行って返すか
+- [ ] 住民票入手する
+    - [ ] 方法調べる
+
+
+
+** 整理
+*** Volmetric
+case1:
+シフトごとに初期状態に戻る想定
+
+case2:
+
+- [ ] それ以前に，TryGetMachineを使えていないので，基礎の部分からもう一度考え直して実装する．
+- ここはバイトでしかないのでしっかり基礎からやること
+
+*** ARC
+１２日から作業するとして，，，
+毎週２０時間やると？
+→４０時間なので８万円
+ここをしっかり決めておかないと卒業論文に間に合わなくなるので十分に注意すること
+
+*** MISC
+卒論の計画→空間制度→arc→勉強
+
+ルーティーンをなるべく固定すること
+
+
+
+
+
+https://timaeus.co/projects
+
+自分で何とかするしかない
+
+https://forbesjapan.com/articles/detail/86400
+
+
+https://forbesjapan.com/articles/detail/86400
+
+
+
+
+きょうやること
+あしたのvol, arcraのやることの整理ＴＯＤＯリスト
+研究，ステップ作成
+
+意思決定がはやい
+フレームワークが入っているから？
+いずれにしても熟考の積み重ねとトレーニング必要
+
+
+
+* 所感
+
