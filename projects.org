@@ -1,29 +1,29 @@
 
 * MISC
-** DONE ユニクロ→ウルトラヒートテック上2，下2
-→12000
-++＋ゼビオ？→下のフリース1万とかする？++流石に高杉
-** NEXT [#B] パスポートの顔写真 
-DEADLINE: <2025-12-02 Tue>
+** INBOX logをブログに出すときのアイデア
+DEADLINE: <2025-12-25 Thu>
+lispか何かでmdに出力する→細かい処理を書く
+ 
 ** INBOX [#C] GTDについて調べる，あとはgptのやつ見返す
 DEADLINE: <2025-12-25 Thu>
 *** DONE agendaまだ使えてないのでここは注意すること
 *** DONE agendaで重くなった？？？
 https://chatgpt.com/c/692dc161-0788-8322-9539-d3709b757e69
+** DONE ユニクロ→ウルトラヒートテック上2，下2
+→12000
+++＋ゼビオ？→下のフリース1万とかする？++流石に高杉
+** DONE [#B] パスポートの顔写真 
+DEADLINE: <2025-12-02 Tue>
 ** DONE [#B] 各所に口座の変更を申し出る
 DEADLINE: <2025-12-02 Tue>
 *** DONE バイト先
 *** DONE ゆうちょの明細を見て全て楽天に変更すること，ただしgxpはそのままでおk
 *** NEXT 楽天口座にすべきか，もしくは楽天カードを登録すべきか？gptに聞いてみる
 DEADLINE: <2025-12-08 Mon>
-** INBOX logをブログに出すときのアイデア
-DEADLINE: <2025-12-25 Thu>
-lispか何かでmdに出力する→細かい処理を書く
- 
 ** DONE dot Rに返信する 
   Created on [2025-12-03 Wed 18:53]
 
-** INBOX 12月の定期買う
+** DONE 12月の定期買う
 ** DONE dot Rに返信する 
   Created on [2025-12-03 Wed 18:53]
 ** DONE tips pageも作る
@@ -970,6 +970,35 @@ CNNでやった場合に画像モデルの学習過程→distribution simplicity
 - 
 
 
+** 2025-12-12 09:07                                                      :B4:
+- vitについて調べる
+  - [ ] 文献を3つ見つけた．
+    これらはvitの発達段階に関係するもの．
+  - [ ] Emergence of Human-Like Attention in Self-Supervised Vision Transformers
+    視線がわかるなら，発達段階でもわかるのでは？
+    この論文で提案した学習手法がtureなら，その上で発達段階中の子供がどんなところを見ているのかもわかるし，その上で
+    モデルのLLCを見ることでモジュール文化が理解できるかもしれない？？？？？
+    [[https://resou.osaka-u.ac.jp/ja/research/2025/20250530_1][人工知能が人と同じ視線を獲得した！ - ResOU]]
+    - 情報量を最大化する自発的な学習を行ったビジョン・トランスフォーマー(ViT)と呼ばれる人工知能が、人間と極めてよく似た場所を見るように「育つ」ことを発見。
+    - 人間の脳がどのように視覚情報を処理し、どこに注意を向けるのかはまだ完全に理解されていないため、人間のような注意機構をAIで再現することは困難だった。
+    - ViTは、場面を「人や物の中心」、「人や物の全体」、「場面の背景」の3群に分解して注意を向けていることから、人間もViTのように世界を3群に分けて理解している可能性が示唆された。
+    - DINO法を使うと学習済みモデルの視点が人間に近くなる．
+    - [ ] attention headごとのクラスタリングをしたみたいだが，それはどうやってやったのか？
+
+   #+begin_src
+     attention head のクラスタリングは、各 attention head の注意行動を数値化 → 距離行列を作成 → 次元削減/クラスタリング手法で分類する流れで行われています。
+   #+end_src
+
+  - [ ] How Does Attention Work in Vision Transformers? A Visual Analytics Attempt
+    
+  - [ ] Teaching Matters: Investigating the Role of Supervision in Vision Transformers
+
+  - [ ] Does Object Binding Naturally Emerge in Large Pretrained Vision Transformers?
+    
+  - 調べる上でのめもなど
+    - パッチ埋込って何？
+    - オブジェクト結合って何？
+      
 * ARCANAIN2026
 
 * アクチュアリーの勉強
