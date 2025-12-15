@@ -738,9 +738,10 @@ https://im8dhtvp.sharepoint.com/:w:/r/sites/group.nara_optimization/files/%E5%86
 
 
 
-
-
+<<<<<<< Updated upstream
    
+=======
+>>>>>>> Stashed changes
 
 * Arcanain2025
 ** INBOX 自分の開発部分をまとめたページをqiita で作ってみること
@@ -968,7 +969,6 @@ CNNでやった場合に画像モデルの学習過程→distribution simplicity
 
 - ある程度の理解でまず動かせて，図が作れること
 - 
-
 
 ** 2025-12-12 09:07                                                      :B4:
 - vitについて調べる
