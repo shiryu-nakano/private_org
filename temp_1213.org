@@ -1,176 +1,115 @@
-#+title: 2025-12-13
+#+title: 2025-12-14
 #+filetags: :daily:
 
-* ’¼‹ß‚Ì—\’è’÷‚ßØ‚è
+* ç›´è¿‘ã®äºˆå®šç· ã‚åˆ‡ã‚Š
 
 * TASK
 
 * LOG
-** 2025-12-12 09:07  :B4:
-- vit‚É‚Â‚¢‚Ä’²‚×‚é
-  - [ ] •¶Œ£‚ð3‚ÂŒ©‚Â‚¯‚½D
-    ‚±‚ê‚ç‚Ívit‚Ì”­’B’iŠK‚ÉŠÖŒW‚·‚é‚à‚ÌD
-  - [ ] Emergence of Human-Like Attention in Self-Supervised Vision Transformers
-    Ž‹ü‚ª‚í‚©‚é‚È‚çC”­’B’iŠK‚Å‚à‚í‚©‚é‚Ì‚Å‚ÍH
-    ‚±‚Ì˜_•¶‚Å’ñˆÄ‚µ‚½ŠwKŽè–@‚ªture‚È‚çC‚»‚Ìã‚Å”­’B’iŠK’†‚ÌŽq‹Ÿ‚ª‚Ç‚ñ‚È‚Æ‚±‚ë‚ðŒ©‚Ä‚¢‚é‚Ì‚©‚à‚í‚©‚é‚µC‚»‚Ìã‚Å
-    ƒ‚ƒfƒ‹‚ÌLLC‚ðŒ©‚é‚±‚Æ‚Åƒ‚ƒWƒ…[ƒ‹•¶‰»‚ª—‰ð‚Å‚«‚é‚©‚à‚µ‚ê‚È‚¢HHHHH
-    [[https://resou.osaka-u.ac.jp/ja/research/2025/20250530_1][lH’m”\‚ªl‚Æ“¯‚¶Ž‹ü‚ðŠl“¾‚µ‚½I - ResOU]]
-    - î•ñ—Ê‚ðÅ‘å‰»‚·‚éŽ©”­“I‚ÈŠwK‚ðs‚Á‚½ƒrƒWƒ‡ƒ“Eƒgƒ‰ƒ“ƒXƒtƒH[ƒ}[(ViT)‚ÆŒÄ‚Î‚ê‚élH’m”\‚ªAlŠÔ‚Æ‹É‚ß‚Ä‚æ‚­Ž—‚½êŠ‚ðŒ©‚é‚æ‚¤‚Éuˆç‚Âv‚±‚Æ‚ð”­Œ©B
-    - lŠÔ‚Ì”]‚ª‚Ç‚Ì‚æ‚¤‚ÉŽ‹Šoî•ñ‚ðˆ—‚µA‚Ç‚±‚É’ˆÓ‚ðŒü‚¯‚é‚Ì‚©‚Í‚Ü‚¾Š®‘S‚É—‰ð‚³‚ê‚Ä‚¢‚È‚¢‚½‚ßAlŠÔ‚Ì‚æ‚¤‚È’ˆÓ‹@\‚ðAI‚ÅÄŒ»‚·‚é‚±‚Æ‚Í¢“ï‚¾‚Á‚½B
-    - ViT‚ÍAê–Ê‚ðul‚â•¨‚Ì’†SvAul‚â•¨‚Ì‘S‘ÌvAuê–Ê‚Ì”wŒiv‚Ì3ŒQ‚É•ª‰ð‚µ‚Ä’ˆÓ‚ðŒü‚¯‚Ä‚¢‚é‚±‚Æ‚©‚çAlŠÔ‚àViT‚Ì‚æ‚¤‚É¢ŠE‚ð3ŒQ‚É•ª‚¯‚Ä—‰ð‚µ‚Ä‚¢‚é‰Â”\«‚ªŽ¦´‚³‚ê‚½B
-    - DINO–@‚ðŽg‚¤‚ÆŠwKÏ‚Ýƒ‚ƒfƒ‹‚ÌŽ‹“_‚ªlŠÔ‚É‹ß‚­‚È‚éD
-    - [ ] attention head‚²‚Æ‚ÌƒNƒ‰ƒXƒ^ƒŠƒ“ƒO‚ð‚µ‚½‚Ý‚½‚¢‚¾‚ªC‚»‚ê‚Í‚Ç‚¤‚â‚Á‚Ä‚â‚Á‚½‚Ì‚©H
+*** ã™ã“ã—æ•´ç†
+ã‚„ã‚‹ã“ã¨ãŒç©ã¿ã‚ãŒã£ã¦ããŸ
+ã¨ã«ã‹ãç ”ç©¶ã§ã¯ï¼Œã„ã¾ã™ãã‚„ã‚‹ã¹ãã“ã¨ã¯ä¸€ã¤ã§ï¼Œdiffã®å†å®Ÿè£…ã‚’è¡Œã†ã“ã¨ï¼Ž
+ãã®ãŸã‚ã®ã‚¹ãƒ†ãƒƒãƒ—ã‚’ä½œã£ã¦ãŠã
 
-   #+begin_src
-     attention head ‚ÌƒNƒ‰ƒXƒ^ƒŠƒ“ƒO‚ÍAŠe attention head ‚Ì’ˆÓs“®‚ð”’l‰» ¨ ‹——£s—ñ‚ðì¬ ¨ ŽŸŒ³íŒ¸/ƒNƒ‰ƒXƒ^ƒŠƒ“ƒOŽè–@‚Å•ª—Þ‚·‚é—¬‚ê‚Ås‚í‚ê‚Ä‚¢‚Ü‚·B
-   #+end_src
+volã¯ã—ãŸã«æ›¸ã„ã¦ã‚ã‚‹é€šã‚Šã®ã“ã¨ã‚’ã™ã‚‹ã ã‘ï¼Ž
 
-  - [ ] How Does Attention Work in Vision Transformers? A Visual Analytics Attempt
-    
-  - [ ] Teaching Matters: Investigating the Role of Supervision in Vision Transformers
+arcraã¯å°‘ã—è¤‡é›‘ãªã®ã§æ³¨æ„ã—ã¤ã¤ã‚„ã‚‹ï¼Ž
+- test1 ã¨ã‚Šã‚ãˆãšçµ‚äº†   
+- test2 ã¾ã çµ‚ã‚ã£ã¦ã„ãªã„ã®ã§ç’°å¢ƒæ§‹ç¯‰ã ã‘ã§ã‚‚ã‚„ã‚‹ã“ã¨ï¼Ž
 
-  - [ ] Does Object Binding Naturally Emerge in Large Pretrained Vision Transformers?
-    
-  - ’²‚×‚éã‚Å‚Ì‚ß‚à‚È‚Ç
-    - ƒpƒbƒ`–„ž‚Á‚Ä‰½H
-    - ƒIƒuƒWƒFƒNƒgŒ‹‡‚Á‚Ä‰½H
-** 1400‚©‚çvolmetric
-*** ‚Æ‚Í‚¢‚¦‚¿‚å‚Á‚Æ®—
-‚â‚é‚±‚Æ‚ªÏ‚Ý‚ ‚ª‚Á‚Ä‚«‚½
-‚Æ‚É‚©‚­Œ¤‹†‚ÅC‚·‚®‚â‚é‚×‚«‚±‚Æ‚Íˆê‚Â‚ÅCdiff‚ÌÄŽÀ‘•‚ðs‚¤‚±‚ÆD
-‚»‚Ì‚½‚ß‚ÌƒXƒeƒbƒv‚ðì‚Á‚Ä‚¨‚­
-
-
-vol‚Í‚µ‚½‚É‘‚¢‚Ä‚ ‚é’Ê‚è‚Ì‚±‚Æ‚ð‚·‚é‚¾‚¯D
-
-arcra‚Í­‚µ•¡ŽG‚È‚Ì‚Å’ˆÓ‚µ‚Â‚Â‚â‚éD
-- test1
-  ‚Æ‚è‚ ‚¦‚¸I—¹   
-- test2
-  ‚Ü‚¾I‚í‚Á‚Ä‚¢‚È‚¢‚Ì‚ÅŠÂ‹«\’z‚¾‚¯‚Å‚à‚â‚é‚±‚ÆD
-*** 1500-imple of case 2
-Firstly I have to imple TryGet
-
-ƒ‹[ƒv‚ÌŠeƒm[ƒhŠÔ‚Ì‘JˆÚ‚ðŒ©‚Ä
-ŠeOperationType‚ð‰ðÍ‚µ
-‚»‚ê‚ª‰ÁHˆ—‚È‚çTryGetMachineTimeSpan(machineId, (processId, processMapId))‚ðŒÄ‚Ño‚·
-‚»‚ê‚ªˆÚ“®‘€ì‚È‚çTryGetMoveTimeSpan(operation)‚ðŒÄ‚Ño‚·
-‚·‚×‚Ä‚ÌŽžŠÔ‚ð‡Œv‚µ‚Äƒ‹[ƒv1Žü‚ÌŠ—vŽžŠÔ‚ð•Ô‚·
-**** CaseA
-=== Shift Calculation Result ===
-
-LoopId: 33-34-16-64-55-63-11-17-44-35-33
-RepeatCount: 200
-TotalTime: 7.12:00:00
-StartDateTime: 2024/01/01 9:00:00
-EndDateTime: 2024/01/26 18:00:00
-TotalPeriod: 26 days
-OperatingDays: 20 days
-ProducedWorkCount:
-  w1: 420
-  w2: 200
-
-**** CaseB
-=== Shift Calculation Result ===
-
-LoopId: 33-34-16-64-55-63-11-17-44-35-33
-RepeatCount: 200
-TotalTime: 6.22:40:00
-StartDateTime: 2024/01/01 9:00:00
-EndDateTime: 2024/02/02 15:40:00
-TotalPeriod: 33 days
-OperatingDays: 25 days
-ProducedWorkCount:
-  w1: 400
-  w2: 200
-
-- 1540
-  Å’áŒÀ‚ÌcaseB‚ÌŽÀ‘•‚ÍI—¹‚µ‚½D
-  ‚±‚±‚©‚çÚ×‚ð‹l‚ß‚Ä‚¢‚­•K—v‚ª‚ ‚é¨®—
-
-
-* ƒ^ƒXƒN®—
-- [X] ~~*Už ‚P‚UŽž‚É‚È‚Á‚½‚ç‚â‚é*~~ [2025-12-12]
-    - [X] ~~*‹ž“s‹âs‚Æ’†‰›M—p‹àŒÉ‚©‚çˆø‚«o‚µ‚Ä—X’™‚É“ü‚ê‚ÄC—X’™‚©‚çƒAƒvƒŠ‚ÅU‚èž‚Ý‚·‚é*~~ [2025-12-12]
-    - [X] —X’™‚©‚çU‚èž‚Ý‚ðs‚¤ —X•Ö‹Ç‚És‚Á‚½‚Ù‚¤‚ª‘‚¢Dƒnƒ“ƒR‚È‚¢‚¯‚Çs‚¯‚é‚Ì‚©H  
-- [ ] ‘—Þ‚È‚Ç—X‘—‚·‚é
-    - [ ] ƒŒƒ^[ƒpƒbƒN‚Ì‘—‚è•û¨ ƒ|ƒXƒg‚Å‚¢‚¯‚éƒ|ƒC
-- [X] –{‚ð•Ô‚³‚È‚¢‚Æ‚¢‚¯‚È‚¢
-    - [X] ¡oì‚És‚Á‚Ä•Ô‚·‚©
-- [ ] Z–¯•[“üŽè‚·‚é
-    - [ ] •û–@’²‚×‚é
+*** æµã‚Œ
+9 æ™‚ã«ã¡ã‚ƒã‚“ã¨èµ·ããŸ
+ï¼˜æ™‚å‰ã«ç›®è¦šã‚ãŸã‚‚ã®ã®ï¼Œèµ·ãä¸ŠãŒã‚Œãšï¼Žï¼Žï¼Ž
+çµå±€èµ·ãä¸ŠãŒã£ãŸã®ã¯ï¼‘ï¼æ™‚éŽãŽã¦ã‹ã‚‰ï¼Žï¼Žï¼Ž
+- 1100ã«volã«åˆ°ç€ã—ã¦ï¼Œocr
+- 14æ™‚éŽãŽã«ã¯ocrã®ãƒ‡ãƒ¢ã®å®Ÿè¡Œã‚’å®Œäº†ã—ãŸ
+- ï¼‘æ™‚é–“ã»ã©ä¼‘æ†©ã—ãŸï¼Ž1520ã‹ã‚‰shiftè¨ˆç®—ã®å®Ÿè£…ã‚’è¡Œã†
+  çµ‚äº†æ¡ä»¶ã‚’ã©ã®ã‚ˆã†ã«è¡¨ç¾ã™ã‚‹ã‹
+  ã²ã¨ã¾ãšã†ã”ãã‚‚ã®ã¯ä½œã‚Œã‚‹ã¨ã¯æ€ã†ã‚‚ã®ã®ï¼Œå‰å›žã®MTGã‹ã‚‰å°‘ã—ä¿®æ­£ã—ãªãã¦ã¯ãªã‚‰ãªã„éƒ¨åˆ†ãŒå¤šã„
+  çµ‚äº†æ¡ä»¶ã‚’ï¼’ã¤å‹•ã‹ã›ã‚‹ã‚ˆã†ã«ã—ãŸã‚‰ï¼Œä¸­èº«ã®å®Ÿè£…éƒ¨åˆ†ã‚’ãƒªãƒ•ã‚¡ã‚¯ã‚¿ãƒªãƒ³ã‚°ã™ã‚‹ï¼ŽãŠãã‚‰ãã“ã®ä½œæ¥­ã«çµæ§‹æ™‚é–“ãŒã‹ã‹ã‚‹ã¨æ€ã‚ã‚Œã‚‹ï¼Ž
 
 
 
-** ®—
-*** LAB
-- vit ‚É‚Â‚¢‚Ä‚Ì’²‚×‚à‚Ì‚ð‚·‚é
-- [ ] ‚»‚à‚»‚à‚â‚è‚½‚¢‚±‚Æ‚Í??
-  * https://chatgpt.com/g/g-p-68d0141abee88191a2375b9114c711ce-pjb4/c/6937d3e3-24c4-8327-9630-d9f3fa6d3e3f
+*** ä»Šæ—¥ã®è¨ˆç”»
+ç«‹ã¦ç›´ã›ãã†ï¼Žï¼’æ™‚é–“ï¼Œï¼’æ™‚é–“ã§volã®ï¼’ã¤ã®ã‚¿ã‚¹ã‚¯ãŒã‹ãŸãšã‘ã‚‰ã‚Œã‚‹ï¼Ž
+ï¼ˆæ—©ãçµ‚ã‚ã‚Œã°ocrï¼‰
+ã»ã‹ã®ã‚ã¾ã‚Šã®æ™‚é–“ã§ocr
+ã¾ãšOCR
+**** TODO TEST2ã‚’ã©ã†ã«ã‹ã™ã‚‹å¿…è¦ãŒã‚ã‚‹
+**** TODO SSCã‚¿ã‚¹ã‚¯ãŒå¿…è¦ï¼Ÿæ§‹é€ åŒ–ã—ãŸã„ãªã‚‰
+~1400
+ï¼“æ™‚é–“ä½œæ¥­â†’ã²ã¨ã¾ãšgoogle vision ocrã®APIã¯å‹•ã‹ã›ãŸ
 
-ì‹Æ‰¼àFvit‚É‚¨‚¯‚éDSB‚Íhead‚Ì•ª‰»‚Æê–å‰»‚É‚æ‚Á‚Äà–¾‚Å‚«‚é‚Ì‚©H
-- [X] diff˜_•¶‚ÍŠ®‘SÄŒ»‰Â”\‚©‚Ç‚¤‚©Šm”F‚·‚é¨github
-  ‚±‚ÌŽÀŒ±ƒvƒƒgƒRƒ‹‚ªŠ®‘SŒöŠJ‚³‚ê‚Ä‚¢‚é‚í‚¯‚Å‚Í‚È‚³‚»‚¤
-  
-  
-- [ ] diff˜_•¶‚ªŠ®‘S‚ÉÄŒ»‰Â”\‚È‚çC‚»‚Ì‚¤‚¦‚Åƒ‚ƒfƒ‹‚¾‚¯‚ð“ü‚ê‘Ö‚¦‚Ä“¯—l‚É„’è‚µ‚Ä‚Ý‚é‚Æ‚Ç‚¤‚È‚é‚©H
-- [ ] CNNŒn“‚Ì—‰ð
-  - [ ] ‚Â‚­‚Á‚Ä—‰ð‚µ‚½‚¢‚ªC‚»‚ñ‚ÈŽžŠÔ‚Í‚ ‚é‚Ì‚©H
-  - [ ] 0‚©‚çDL‚Ì‚P‚É‚ ‚Á‚½D–{‹C‚È‚ç‚â‚é‚×‚«‚¾‚ªC‚Ü‚¸‚ÍŒ‹‰Ê‚ðo‚·‚±‚Æ‚ª—Dæ‚³‚ê‚é‚×‚«‚ÅC‰½‚Æ‚©‚µ‚Ä‘‚­ÄŒ»‚µ‚ÄCvit‚Å‰ñ‚·‚×‚«
-- [ ] VIT‚Å‰ñ‚·ŽÀŒ±‚É‚Â‚¢‚Ä
-  - [ ] 
+ã“ã®python APIã‚’ä½¿ã£ãŸãƒ­ã‚¸ãƒƒã‚¯ã‚’ä½œã‚‹
+â†’ãã®å¾Œãƒ†ã‚¹ãƒˆã‚’ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«ã”ã¨ã«ã§ãã‚‹ã‚ˆã†ã«ã™ã‚‹
+ã•ã‚‰ã«ãã‚ŒãŒã§ããŸã‚‰ï¼Œå®Ÿéš›ã®æ–‡æ›¸ã§å®Ÿé¨“ã—ã¦ã¿ã‚‹ã“ã¨
 
-‚¤‚Ü‚¢‚±‚ÆCŽÀŒ±‚Æ—˜_‚ð•Às‚·‚é•û–@‚ðŒ©o‚³‚È‚¢‚Æ‚±‚ê‚©‚çŒµ‚µ‚­‚È‚Á‚Ä‚µ‚Ü‚¤‚Ì‚Å’ˆÓ‚·‚é‚±‚Æ
-‚Ü‚¸‚Æ‚É‚©‚­‰ñ‚¹‚é‚æ‚¤‚É‚·‚é
+ãã‚Œã‚‚çµ‚ã‚ã£ãŸã‚‰æ¬¡ã¯Document AIã‚’è©¦ã™ã¨ã„ã„ã‹ã‚‚ã—ã‚Œãªã„
+ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—ã¨ã—ã¦ã¯é¢å€’ã§ã¯ã‚ã‚‹ã‚‚ã®ã®ï¼Œ
 
-‚Ü‚¢‚É‚¿‚Ç‚Ì‚­‚ç‚¢‚ÌŽžŠÔ‚ðØ‚è‹l‚ß‚ç‚ê‚é‚¾‚ë‚¤‚©H
-Q‚é’¼‘O‚ÌŽžŠÔ‚ð‰½‚©‚Ù‚©‚ÌŽžŠÔ‚É‚Ô‚¿ž‚ß‚é‚©‚ÈH
-
-
-*** Volmetric
-case1:
-ƒVƒtƒg‚²‚Æ‚É‰Šúó‘Ô‚É–ß‚é‘z’è
-
-case2:
-
-- [ ] ‚»‚êˆÈ‘O‚ÉCTryGetMachine‚ðŽg‚¦‚Ä‚¢‚È‚¢‚Ì‚ÅCŠî‘b‚Ì•”•ª‚©‚ç‚à‚¤ˆê“xl‚¦’¼‚µ‚ÄŽÀ‘•‚·‚éD
-- ‚±‚±‚ÍƒoƒCƒg‚Å‚µ‚©‚È‚¢‚Ì‚Å‚µ‚Á‚©‚èŠî‘b‚©‚ç‚â‚é‚±‚Æ
-
-*** ARC
-‚P‚Q“ú‚©‚çì‹Æ‚·‚é‚Æ‚µ‚ÄCCC
-–ˆT‚Q‚OŽžŠÔ‚â‚é‚ÆH
-¨‚S‚OŽžŠÔ‚È‚Ì‚Å‚W–œ‰~
-‚±‚±‚ð‚µ‚Á‚©‚èŒˆ‚ß‚Ä‚¨‚©‚È‚¢‚Æ‘²‹Æ˜_•¶‚ÉŠÔ‚É‡‚í‚È‚­‚È‚é‚Ì‚Å\•ª‚É’ˆÓ‚·‚é‚±‚Æ
-
-*** MISC
-‘²˜_‚ÌŒv‰æ¨‹óŠÔ§“x¨arc¨•×‹­
-
-ƒ‹[ƒeƒB[ƒ“‚ð‚È‚é‚×‚­ŒÅ’è‚·‚é‚±‚Æ
+TEST2ã®vision ocrã®å®Ÿè£…ãŒå°‘ã—é›‘ã ã£ãŸã®ã§å°‘ã—æ•´ç†
+å¯èƒ½ãªã‚‰DocumentAIã§å®Ÿè¡Œã—ã¦ã¿ã‚‹
+ã“ã“ã¾ã§ã‚’ã¾ã¨ã‚ã‚‹ 
 
 
 
 
+
+
+
+
+* ã‚¿ã‚¹ã‚¯æ•´ç†
+** INBOX å¼•ã£è¶Šã—é–¢ä¿‚
+- [X] ~~*æŒ¯è¾¼ ï¼‘ï¼–æ™‚ã«ãªã£ãŸã‚‰ã‚„ã‚‹*~~ [2025-12-12]
+  - [X] ~~*äº¬éƒ½éŠ€è¡Œã¨ä¸­å¤®ä¿¡ç”¨é‡‘åº«ã‹ã‚‰å¼•ãå‡ºã—ã¦éƒµè²¯ã«å…¥ã‚Œã¦ï¼Œéƒµè²¯ã‹ã‚‰ã‚¢ãƒ—ãƒªã§æŒ¯ã‚Šè¾¼ã¿ã™ã‚‹*~~ [2025-12-12]
+  - [X] éƒµè²¯ã‹ã‚‰æŒ¯ã‚Šè¾¼ã¿ã‚’è¡Œã† éƒµä¾¿å±€ã«è¡Œã£ãŸã»ã†ãŒæ—©ã„ï¼Žãƒãƒ³ã‚³ãªã„ã‘ã©è¡Œã‘ã‚‹ã®ã‹ï¼Ÿ  
+- [ ] æ›¸é¡žãªã©éƒµé€ã™ã‚‹
+  - [ ] åˆæ ¼é€šçŸ¥æ›¸ã‚’ãƒ—ãƒªãƒ³ãƒˆã™ã‚Œã°okã‚ã¨ã¯éƒµé€ã™ã‚‹ã ã‘
+  - [ ] ãƒ¬ã‚¿ãƒ¼ãƒ‘ãƒƒã‚¯ã®é€ã‚Šæ–¹â†’ ãƒã‚¹ãƒˆã§ã„ã‘ã‚‹ãƒã‚¤
+
+- [X] æœ¬ã‚’è¿”ã•ãªã„ã¨ã„ã‘ãªã„
+  - [X] ä»Šå‡ºå·ã«è¡Œã£ã¦è¿”ã™ã‹
+- [X] ä½æ°‘ç¥¨å…¥æ‰‹ã™ã‚‹
+  - [X] æ–¹æ³•èª¿ã¹
+
+** Volmetric
+- case1:
+  ã‚·ãƒ•ãƒˆã”ã¨ã«åˆæœŸçŠ¶æ…‹ã«æˆ»ã‚‹æƒ³å®š
+- case2:
+  - ãã‚Œä»¥å‰ã«ï¼ŒTryGetMachineã‚’ä½¿ãˆã¦ã„ãªã„ã®ã§ï¼ŒåŸºç¤Žã®éƒ¨åˆ†ã‹ã‚‰ã‚‚ã†ä¸€åº¦è€ƒãˆç›´ã—ã¦å®Ÿè£…ã™ã‚‹ï¼Ž
+
+å‰å›žã®MTGã®æ±ºå®šäº‹é …
+æ¬¡ã‚„ã‚‹ã“ã¨ã¯ï¼“ã¤ã‚ã‚‹ï¼Ž
+â‘ ãƒŽãƒ¼ãƒ‰ã¾ã§ãŸã©ã‚Šç€ã„ã¦ã‹ã‚‰ãƒ«ãƒ¼ãƒ—ã‚’å›žã—ï¼Œã‚ã‚‹ãƒŽãƒ¼ãƒ‰ã‹ã‚‰åˆ¥ã®ãƒŽãƒ¼ãƒ‰ã¸é€²ã‚€
+â‘¡æ™‚é–“å„ªå…ˆã®çµ‚äº†åˆ¤å®š
+â‘¢å€‹æ•°å„ªå…ˆã®çµ‚äº†åˆ¤å®š
+
+
+** ARC
+ï¼‘ï¼’æ—¥ã‹ã‚‰ä½œæ¥­ã™ã‚‹ã¨ã—ã¦ï¼Œï¼Œï¼Œ
+æ¯Žé€±ï¼’ï¼æ™‚é–“ã‚„ã‚‹ã¨ï¼Ÿ
+â†’ï¼”ï¼æ™‚é–“ãªã®ã§ï¼˜ä¸‡å††
+ã“ã“ã‚’ã—ã£ã‹ã‚Šæ±ºã‚ã¦ãŠã‹ãªã„ã¨å’æ¥­è«–æ–‡ã«é–“ã«åˆã‚ãªããªã‚‹ã®ã§ååˆ†ã«æ³¨æ„ã™ã‚‹ã“ã¨
+
+** MISC
+å’è«–ã®è¨ˆç”»â†’ç©ºé–“åˆ¶åº¦â†’arcâ†’å‹‰å¼·
+
+ãƒ«ãƒ¼ãƒ†ã‚£ãƒ¼ãƒ³ã‚’ãªã‚‹ã¹ãå›ºå®šã™ã‚‹ã“ã¨
 
 https://timaeus.co/projects
 
-Ž©•ª‚Å‰½‚Æ‚©‚·‚é‚µ‚©‚È‚¢
+è‡ªåˆ†ã§ä½•ã¨ã‹ã™ã‚‹ã—ã‹ãªã„
 
 https://forbesjapan.com/articles/detail/86400
 
 
-https://forbesjapan.com/articles/detail/86400
+** æ›¸ç‰©ãƒ»å‹•ç”»
+- https://discord.com/channels/1112390837775646721/1123414134508245083
+  ã“ã®ãƒãƒ£ãƒ³ãƒãƒ«ã®æ•™è‚²ç³»ã¯ã™ã¹ã¦
+* æ‰€æ„Ÿ
+æœã®æ™‚é–“ãŒãªã„åˆ†ï¼Œè«–æ–‡ãŒèª­ã‚ãªã„ï¼Žï¼Ž
+ã‘ã©ãšã£ã¨åˆå¾Œã«èµ·ãã¦ãŸçŠ¶æ…‹ã‹ã‚‰è€ƒãˆã‚‹ã¨ã‹ãªã‚Šå‰é€²ã—ãŸã¨æ€ã†
+äºŒé‡ã§ä½œæ¥­ã‚’é€²ã‚ã‚‹å ´åˆã¯æ³¨æ„æ·±ãé€²ã‚ã‚‹ã“ã¨ãŒé‡è¦ã ã¨æ„Ÿã˜ãŸ
 
-
-
-
-‚«‚å‚¤‚â‚é‚±‚Æ
-‚ ‚µ‚½‚Ìvol, arcra‚Ì‚â‚é‚±‚Æ‚Ì®—‚s‚n‚c‚nƒŠƒXƒg
-Œ¤‹†CƒXƒeƒbƒvì¬
-
-ˆÓŽvŒˆ’è‚ª‚Í‚â‚¢
-ƒtƒŒ[ƒ€ƒ[ƒN‚ª“ü‚Á‚Ä‚¢‚é‚©‚çH
-‚¢‚¸‚ê‚É‚µ‚Ä‚ànl‚ÌÏ‚Ýd‚Ë‚ÆƒgƒŒ[ƒjƒ“ƒO•K—v
-
-
-* ŠŠ´
-
+è‡ªä¿¡ æŽ›ã‘ãŸæ™‚é–“ã«ã¯å¤§ããå½±éŸ¿ã•ã‚Œã‚‹ï¼Žvolã¯ã‹ãªã‚Šã‚³ãƒ³ã‚¹ã‚¿ãƒ³ãƒˆã«ï¼‘æ—¥ï¼–æ™‚é–“ã¨ã‹ã‚’ç¶™ç¶šã—ã¦ããŸï¼Ž
+ä¸€æ–¹Bï¼”ã¯ã©ã†ã‹ã¨è€ƒãˆã‚‹ã¨ï¼Œã¾ã ã¾ã è¶³ã‚Šãªã„ã®ã§ã¯ãªã„ã‹ï¼Ÿ

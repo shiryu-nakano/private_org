@@ -38,7 +38,7 @@ lispか何かでmdに出力する→細かい処理を書く
 
 * ARCRA_OCR
 ** HOME
-** NEXT プロトタイプ開発
+** DONE プロトタイプ開発
     - 残タスク
     - [x]  傾き補正　2
       - ある程度簡単にできそう
@@ -65,10 +65,9 @@ lispか何かでmdに出力する→細かい処理を書く
 	- ~~これと別にjsonオブジェクトとpathをうけとって書き込むモジュールを作成する．~~
 
 ** INBOX deep使う側も開発
-** something..
+** something
 ** archive
 ## Memo
-
 - [ ]  
 
 ### 当面の予定
@@ -244,7 +243,6 @@ $$
 ww
 $$
 
-
 ** 参考
 - [[https://qiita.com/ryome/items/16fc42854fe93de78a23][画像から文字を瞬時に読み取る！Tesseractとpytesseractの驚異の力【Python】 #Python3 - Qiita]]
 - [[https://qiita.com/kenshin-627/items/098703383374e1e7b65b][Pythonで画像のエッジ検出と直線検出をする #Python3 - Qiita]]
@@ -253,27 +251,43 @@ $$
 - https://github.com/tesseract-ocr/tesseract
 - https://www.notion.so/ARCRA-project-2ac1fbe7470a80919846fcd70a64c3cc?source=copy_link
   
+
+- google vision ocrの設定時のgpt
+  https://chatgpt.com/c/693f84a6-228c-8321-8305-600763f0ca31
+- https://chatgpt.com/c/693d30d2-c774-8323-9ab9-65f263a4e08d
+  適当に聞いてみたときに，こいつがDocumentAiを進めてきた
+- 
+*** Google Vision OCR
+- https://valmore.work/cloud-vision-api-ocr/
+  キーの設定からAPI呼び出しまでの最小限の解説
+- https://nikkie-ftnext.hatenablog.com/entry/ocr-with-google-vision-api-python-first-step
+  これもvision APIのデモっぽいけど使っていない
+- https://qiita.com/jjjkkkjjj/items/cd4629083017e2d5ce77
+  業務効率化ツールの開発
+- https://qiita.com/zacksan/items/a321e8d857dfdf72e214
+  これも結局レスポンスを教えてくれないので微妙
+
 ** INBOX 開発のパワポを作成すること 
   Created on [2025-12-03 Wed 01:30]
 ** INBOX 正規表現の定義がしっかりしないと話が次に進まない 
   Created on [2025-12-03 Wed 01:46]
 
+
+
+
 * Volmetric
-
-
-
-** NEXT shiftcalcの実装[1/4]
+** DONE shiftcalcの実装[3/3]
 *** DONE CaseA
-*** NEXT CaseB
+*** DONE NEXT CaseB
 DEADLINE: <2025-12-09 Tue>
 **** NEXT計算の要件をまとめること
-*** NEXT CaseC
-*** NEXT 詳細の設計
+*** CANCEL CaseC
+*** DONE 詳細の設計
 ** INBOX shift calc review
-** INBOX windows python ocrの設計
+** DONE windows python ocrの設計
 ++** INBOX linuxの開発できないの？++
 
-** TASK整理@1121
+** DONE TASK整理@1121
 currently working
 *** DONE カレンダーとタイムスロットの設計
 **** DONE 設計
@@ -295,10 +309,10 @@ CLOCK: [2025-11-21 金 10:35]--[2025-11-21 金 11:33] =>  0:58
 8.
 9.
 ***** DONE timeslot
-*** TODO シフト計算
+*** DONE シフト計算
 SCHEDULED: <2025-11-29 土>
 
-**** TODO 一番簡単な実装を行う
+**** DONE 一番簡単な実装を行う
 
 **** DONE 設計
 SCHEDULED: <2025-11-21 金>
@@ -308,8 +322,8 @@ Calculator自体の設計はOK.あとはテストをもっとガンガン回せ�
 **** DONE proto 実装
 SCHEDULED: <2025-11-22 土>
 **** DONE テスト
-*** TODO 詳細設計
-**** TODO これは打合せするしかない
+*** DONE 詳細設計
+**** DONE これは打合せするしかない
 
 
 
@@ -334,8 +348,6 @@ CaseAひとまず動くようになった．
 やっぱりちゃりで運動した後は全然違う
 スマホを家に持ち込まない．簡単なことでかなり状況は変わるかもしれない
 情報を入れながら考え事をしてはいけない
-
-
 
 ** 1203
 1400- vol作業
@@ -388,17 +400,17 @@ Shiftcalculatorはほぼ一つの仕事しかしなくて，それはカレン�
 その時の Calculate は， ICalculateStrategyに委譲していて，この内部実装がいろいろと変わることによって計算内容が変化する
 
 
-**** TODO IShiftResult and Shift Result
+**** DONE IShiftResult and Shift Result
 What I dont know is the mechanism of IShiftResult and its implementation ShiftResult
 **** DONE Ishifr Calc test
-**** TODO constraint imple
-**** TODO  result attribute imple
-**** TODO  shift calc constructor
-**** TODO imple practical attributes and test them
+**** DONE constraint imple
+**** DONE result attribute imple
+**** DONE shift calc constructor
+**** DONE imple practical attributes and test them
 I tried to directly imple IShiftResultAttribute and that was very goot attitude.
 By doing so, i  can  deeply understand how to use it and get used to them.
-**** TODO after testing
-**** TODO  Calc constant paying in a month
+**** DONE after testing
+**** DONE Calc constant paying in a month
 *** 他
 ++パスポートの写真の取り直し++
 +メールの作成 メールの返信+
@@ -728,7 +740,7 @@ https://im8dhtvp.sharepoint.com/:w:/r/sites/group.nara_optimization/files/%E5%86
 
 
 
-
+   
 
 * Arcanain2025
 ** INBOX 自分の開発部分をまとめたページをqiita で作ってみること
@@ -854,6 +866,7 @@ DEADLINE: <2025-12-28 Sun>
 ** INBOX ポスター
 ** INBOX revirew
 ** INBOX 振り返り
+SCHEDULED: <2025-12-15 月>
 - マクロ
   - 実験走行がほとんどできなかった
   - 年間通したマイルストーンの計画が甘い
@@ -956,13 +969,21 @@ CNNでやった場合に画像モデルの学習過程→distribution simplicity
 - ある程度の理解でまず動かせて，図が作れること
 - 
 
+
 * ARCANAIN2026
+
 * アクチュアリーの勉強
+
 * 一橋ブートキャンプ
+
 * 統計検定
+
 * 修士の準備
+
 * 簿記3
+
 * 簿記2
+
 * 奨学金など
 ** 研究でお金もらうやつ
 ** 返還手続き
@@ -987,10 +1008,10 @@ https://chatgpt.com/c/6938eda6-9414-8320-8e4c-96cfc42ac3db
 
 ** やること
 
+
 * 賃貸
 - ジェイリース保証委託
   29000,10000,440
-
 
 ** メールで確認
 ドッとあーる賃貸西国分寺店　担当　竹内智則さま
