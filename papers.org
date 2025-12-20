@@ -5,6 +5,14 @@
 #+OPTIONS: links:nil
 
 
+* Embedded Universal Predictive Intelligence: a coherent framework for multi-agent learning
+
+https://www.arxiv.org/abs/2511.22226
+
+-> dwa + DeepRL + CPC
+各エージェントが指摘観測から内的表彰を共有して．
+外敵表彰をせくせいする
+
 
 * DIFFERENTIATION AND SPECIALIZATION OF ATTENTION HEADS VIA THE REFINED LOCAL LEARNING COEFFICIENT
 
@@ -125,7 +133,6 @@ $\theta_k \sim p(\theta \mid D_n)\qquad k = 1,\ldots,K$
 
 
 本文はこのLCについて，①そのモチベーションを外観し，②簡単に導出を追いながらその意味についてまとめる．
-
 
 ** 特異モデル
 ** Learning Coefficientとは
@@ -253,7 +260,7 @@ $$(x_1,...,x_n)$$のみから$$p^*(x)$$を構成する．この手法につい�
 
 
 
-* TODO You’re Measuring Model Complexity Wrong
+* INBOX You’re Measuring Model Complexity Wrong
 by Jesse Hoogland, Stan van Wingerden
 On:11th Oct 2023
 @AI Alignment Forum
@@ -304,9 +311,9 @@ Depelomental Interpretability research agendaにとってこのLLCを基礎と�
 
 
 
-* TODO https://arxiv.org/pdf/2402.05162
-* TODO What should be learned first
-* TODO UNVEILING THE BASIN-LIKE LOSS LANDSCAPE IN LARGE LANGUAGE MODELS
+* INBOX  https://arxiv.org/pdf/2402.05162
+* INBOX What should be learned first
+* INBOX UNVEILING THE BASIN-LIKE LOSS LANDSCAPE IN LARGE LANGUAGE MODELS
 ** TODO この論文わかるために，visualising loss land scapeから読んでいかないといけないかも
 ** 概要
 この論文は，
@@ -355,7 +362,7 @@ most-caseとは？
 smooth modelとは何？これはLLMにおいてこの論文の主張を得るために使った解析手法としてのモデルなのか，
 本当にそういうLLMモデルがあるのかどっち？
 
-* todo [[https://papers.nips.cc/paper_files/paper/2019/hash/87784eca6b0dea1dff92478fb786b401-abstract.html][time matters in regularizing deep networks: weight decay and data augmentation affect early learning dynamics, matter little near convergence]]
+* INBOX [[https://papers.nips.cc/paper_files/paper/2019/hash/87784eca6b0dea1dff92478fb786b401-abstract.html][time matters in regularizing deep networks: weight decay and data augmentation affect early learning dynamics, matter little near convergence]]
 * todo [[https://www.cell.com/patterns/fulltext/s2666-3899(23)00297-0][a critical period for developing face recognition: patterns]] 
 * todo time matters in regularizing deep networks: weight decay and data augmentation affect early learning dynamics, matter little near convergence
 * TODO LLC 論文: the local learning coefficient: a singularity-aware complexity measure
@@ -763,3 +770,5 @@ path2
 ** Methods for Observing and Quantifying Representation Change
 ** Theoretical Frameworks for Developmental Dynamics
 ** 
+
+* サンプリングアルゴリズムの勉強

@@ -1,0 +1,27 @@
+* てすと 
+  Created on [2025-12-19 Fri 20:34]
+* レプリカ法→マルチカノニカル法について勉強する
+** まずそこまでの道筋について調べる
+*** result
+書店で見た感じ
+化学の分子動力学法の本にあった
+Wベイズの本にあった
+物理学のためのデータサイエンスにあった
+
+
+
+Created on [2025-12-19 Fri 20:34]
+* 西本さん（弟）の研究について
+具体的に解いたタスクは何？
+それが，概念形成的な，特にコンポジショナルな世界を構成するパーツを理解する？
+ようにモデル学習にinducive biasをかけているのなら面白いかなと思った
+* CPC-DWAとかの話
+
+自動運転に使えないだろうか？
+
+
+* RNNがedge of chaosであることで，表現の拡張とreductionを行えることで表現を獲得している？？ということ
+[[https://www.semanticscholar.org/paper/Gradient-based-learning-drives-robust-in-recurrent-Farrell-Recanatesi/d08f9893d67bdbe5db40f85027e3b44c834cc246][[PDF] Gradient-based learning drives robust representations in recurrent neural networks by balancing compression and expansion | Semantic Scholar]]
+
+** これってrich lazyの俎上に載せられるのか？
+NTK rnnでできる？
