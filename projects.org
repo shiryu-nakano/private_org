@@ -38,6 +38,8 @@ DEADLINE: <2025-12-08 Mon>
 
 * ARCRA_OCR
 ** HOME
+
+
 ** DONE プロトタイプ開発
     - 残タスク
     - [x]  傾き補正　2
@@ -244,6 +246,7 @@ ww
 $$
 
 ** 参考
+*** Tesseract
 - [[https://qiita.com/ryome/items/16fc42854fe93de78a23][画像から文字を瞬時に読み取る！Tesseractとpytesseractの驚異の力【Python】 #Python3 - Qiita]]
 - [[https://qiita.com/kenshin-627/items/098703383374e1e7b65b][Pythonで画像のエッジ検出と直線検出をする #Python3 - Qiita]]
 - [[https://qiita.com/nrnrk/items/7aecba89ffb02f0b8d12#%E4%BA%8C%E5%80%A4%E5%8C%96%E3%81%AE%E9%96%BE%E5%80%A4%E6%B1%BA%E5%AE%9A][OpenCVを使って免許証を角度補正(射影変換)する-二値化の閾値も自動で決定- #Python - Qiita]]
@@ -251,13 +254,19 @@ $$
 - https://github.com/tesseract-ocr/tesseract
 - https://www.notion.so/ARCRA-project-2ac1fbe7470a80919846fcd70a64c3cc?source=copy_link
   
-
+*** Vision OCR
 - google vision ocrの設定時のgpt
   https://chatgpt.com/c/693f84a6-228c-8321-8305-600763f0ca31
+
 - https://chatgpt.com/c/693d30d2-c774-8323-9ab9-65f263a4e08d
   適当に聞いてみたときに，こいつがDocumentAiを進めてきた
-- 
-*** Google Vision OCR
+
+- pdfからpngに変換するためのソフトウェア
+  https://github.com/oschwartz10612/poppler-windows/releases/
+
+- pdfを画像にして，ocrを読み込んで文字列にする部分の開発
+  https://chatgpt.com/c/6940e224-54b4-8324-b86d-f929441e74ac
+
 - https://valmore.work/cloud-vision-api-ocr/
   キーの設定からAPI呼び出しまでの最小限の解説
 - https://nikkie-ftnext.hatenablog.com/entry/ocr-with-google-vision-api-python-first-step
@@ -267,6 +276,23 @@ $$
 - https://qiita.com/zacksan/items/a321e8d857dfdf72e214
   これも結局レスポンスを教えてくれないので微妙
 
+*** Document AI
+- https://www.divx.co.jp/media/307
+
+- https://chatgpt.com/c/6940e224-54b4-8324-b86d-f929441e74ac
+  構造化データ抽出のデモを動かしたときの会話
+
+- https://qiita.com/shuji-k/items/5d622f53c99465864d84
+
+- https://qiita.com/taka_yayoi/items/1da43cb2c9220867c2df
+
+- https://qiita.com/zacksan/items/a321e8d857dfdf72e214
+
+- 実際に動かしているページ
+  https://console.cloud.google.com/ai/document-ai/locations/us/processors/1d1c870c661d0805/preview?project=project-7ab97012-eca6-4d91-8e4
+
+-
+  
 ** INBOX 開発のパワポを作成すること 
   Created on [2025-12-03 Wed 01:30]
 ** INBOX 正規表現の定義がしっかりしないと話が次に進まない 

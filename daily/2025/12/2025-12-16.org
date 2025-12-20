@@ -11,9 +11,45 @@
 https://arxiv.org/pdf/2303.13731
 
 
+** ながれ
+明らかに酒のせいで寝起きが最悪だった．
+昼前まで寝て．
+３０分ほど，集合論の本を読んでからvolに向かう
+- 1300~vol勤務
 
+- 1332
+  ひとまずocrを動かせるようにした．テストケースで適当に画像を読み込ませてみるか．
+  - 共有されている帳票を読み取ってみる．
+  - ファイル構造が大丈夫かどうかを確認する
+    だらだらやりながらも，ひとまず testfor2の実装とテストは完了した．
+    - 1640 3時間経過．進捗は，test2の実装と，DocAiのデモの実行・確認を完了した．
+      次やることは，DocAIのAPI呼び出してpythonから実行すること．
+      その全体をreviewし，文書作成して終了．
+
+- vol側の作業を1時間ほど
+  もう少ししたらarcのほうで報告する．
+  こっちの仕事はモジュールの再整理
+  
+ 
 * タスク整理
 
 * 所感
 volを1日入れて，さらにここから研究も進められるようになりたい．
 睡眠と休憩を計画的に．1日戦い抜けるように前日から準備する．漸進的に
+
+https://diamond.jp/articles/-/376700?page=3
+
+https://arxiv.org/abs/2512.05117
+- https://kw.maruzen.co.jp/nfc/featurePage.html?requestUrl=toudai2020/14/
+
+- https://kw.maruzen.co.jp/nfc/featurePage.html?requestUrl=toudai2020/07/
+
+応用数学
+https://kuntaras.com/applied-mathematics/
+
+- https://note.com/setzen/n/n60417f520712
+  - https://qiita.com/kueda_cs/items/28008db6491c71ac5659
+
+    - https://www.amazon.co.jp/%E7%B7%9A%E5%9E%8B%E4%BB%A3%E6%95%B0-%E2%94%80%E2%94%80%E7%94%9F%E6%85%8B%E3%81%A8%E6%84%8F%E5%91%B3-Math%EF%BC%86Science-%E3%81%A1%E3%81%8F%E3%81%BE%E5%AD%A6%E8%8A%B8%E6%96%87%E5%BA%AB-%E6%A3%AE%E6%AF%85-ebook/dp/B086MYF9Q8/ref=pd_sbs_d_sccl_1_3/355-4634762-9620308?pd_rd_w=OcZyd&content-id=amzn1.sym.c0889d40-54df-4be4-b1c5-43522a3d0a92&pf_rd_p=c0889d40-54df-4be4-b1c5-43522a3d0a92&pf_rd_r=DVVTN5N5NK4ZX13F4RRV&pd_rd_wg=oMJcc&pd_rd_r=f27579e4-f669-42b6-b543-74c55848f239&pd_rd_i=B086MYF9Q8&psc=1#averageCustomerReviewsAnchor
+
+      https://www.amazon.co.jp/%E7%90%86%E5%B7%A5%E5%AD%A6%E8%80%85%E3%81%8C%E6%9B%B8%E3%81%84%E3%81%9F%E6%95%B0%E5%AD%A6%E3%81%AE%E6%9C%AC-%E7%B7%9A%E5%BD%A2%E4%BB%A3%E6%95%B0-%E3%81%A1%E3%81%8F%E3%81%BE%E5%AD%A6%E8%8A%B8%E6%96%87%E5%BA%AB-%E7%94%98%E5%88%A9%E4%BF%8A%E4%B8%80-ebook/dp/B0CNCK6TR6/ref=tmm_kin_swatch_0?
